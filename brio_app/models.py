@@ -25,6 +25,7 @@ class Exercise(models.Model):
 class Recipe(models.Model):
     name = models.CharField(default='', max_length=200)
     image_url = models.CharField(default='', max_length=200)
+    calories = models.CharField(default='', max_length=200)
     prep_time = models.CharField(default='', max_length=200)
 
     def __str__(self):
@@ -32,7 +33,6 @@ class Recipe(models.Model):
 
 class Ingredient(models.Model):
     name = models.CharField(default='', max_length=200)
-    directions = models.TextField(default='', max_length=1000)
     calories = models.CharField(default='', max_length=200)
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
                              blank=True, null=True, related_name="ingredients")
