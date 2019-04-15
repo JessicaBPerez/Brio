@@ -23,4 +23,4 @@ class WorkoutSerializer(serializers.ModelSerializer):
     exercises = ExerciseSerializer(many=True, read_only=True)
     class Meta:
         model = Workout
-        fields = ('id', 'name', 'image_url', 'target', 'workout_time')
+        fields = ('id', 'name', 'image_url', 'target', 'workout_time', 'exercises')
