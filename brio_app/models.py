@@ -27,6 +27,7 @@ class Recipe(models.Model):
     image_url = models.CharField(default='', max_length=200)
     calories = models.CharField(default='', max_length=200)
     prep_time = models.CharField(default='', max_length=200)
+    directions = models.TextField(default='', max_length=1000)
 
     def __str__(self):
         return self.name
