@@ -12,7 +12,7 @@ class ExerciseView(viewsets.ModelViewSet):
     queryset = Exercise.objects.all()
     serializer_class = ExerciseSerializer
 
-class RecipetView(viewsets.ModelViewSet):
+class RecipeView(viewsets.ModelViewSet):
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
 
