@@ -15,8 +15,8 @@ class Exercise(models.Model):
     exercise_target = models.CharField(default='', max_length=200)
     time = models.CharField(default='', max_length=200)
     video_url = models.CharField(default='', max_length=600)
-    description = models.TextField(default='', max_length=1000)
-    benefits = models.TextField(default='', max_length=1000)
+    description = models.TextField(default='', max_length=2000)
+    benefits = models.TextField(default='', max_length=2000)
     workout = models.ForeignKey(Workout, on_delete='CASCADE', related_name='exercises')
 
     def __str__(self):
@@ -27,7 +27,7 @@ class Recipe(models.Model):
     image_url = models.CharField(default='', max_length=200)
     calories = models.CharField(default='', max_length=200)
     prep_time = models.CharField(default='', max_length=200)
-    directions = models.TextField(default='', max_length=1000)
+    directions = models.TextField(default='', max_length=2000)
 
     def __str__(self):
         return self.name
