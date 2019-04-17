@@ -4,7 +4,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="hero-bkg-animated">
+            <div className="">
                 <h1>Hey, it's me, HOMEM.</h1>
 
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/TTUyqfaKt4M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

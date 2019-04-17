@@ -53,28 +53,3 @@ video,
     width: 100%;
     padding: 20px;
 }
-
-.hero-bkg-animated {
-    background: gray url(https://media0.giphy.com/media/9YNAim10KNUeA/giphy.gif);
-    background-size: cover;
-    width: 100%;
-    margin: 0;
-    text-align: center;
-    height: 3000px;
-    padding-top: 120px;
-    box-sizing: border-box;
-    -webkit-animation: slide 20s linear infinite;
-}
-
-.hero-bkg-animated h1 {
-    font-family: sans-serif;
-}
-
-@-webkit-keyframes slide {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -400px 0;
-    }
-}
