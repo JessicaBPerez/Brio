@@ -31,13 +31,13 @@ export default class Workout extends Component {
     createWorkout = async (event) => {
         event.preventDefault()
         try {
-            const response = await axios.post(`/api/v1/workouts/`, this.state.newWorkout)
+            const response = await axios.post('/api/v1/workouts/', this.state.newWorkout)
 
-            const clonedWorkouts = [this.state.workouts]
-            clonedWorkouts.push(response.date)
+            const clonedWorkouts = [...this.state.workouts]
+            clonedWorkouts.push(response.data)
             this.setState({
                 workouts: clonedWorkouts,
-                newWorkout: {
+                newArtist: {
                     name: '',
                     image_url: '',
                     target: '',
@@ -46,11 +46,20 @@ export default class Workout extends Component {
             })
         }
         catch (err) {
-            console.log(`You got a POST error, Jess!`, err)
+            console.log(`You have a POST error, Jess!`, err)
         }
     }
 
     // Handle form change
+    // handleChange = (event) => {
+    //     const clonedNewWorkout = { ...this.state.newWorkout }
+    //     clonedNewWorkout[event.target.name] = event.target.value
+
+    //     this.setState({
+    //         newWorkout: clonedNewWorkout
+    //     })
+    // }
+
     handleChange = (event) => {
         const clonedNewWorkout = { ...this.state.newWorkout }
         clonedNewWorkout[event.target.name] = event.target.value
