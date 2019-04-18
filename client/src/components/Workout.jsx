@@ -50,16 +50,6 @@ export default class Workout extends Component {
         }
     }
 
-    // Handle form change
-    // handleChange = (event) => {
-    //     const clonedNewWorkout = { ...this.state.newWorkout }
-    //     clonedNewWorkout[event.target.name] = event.target.value
-
-    //     this.setState({
-    //         newWorkout: clonedNewWorkout
-    //     })
-    // }
-
     handleChange = (event) => {
         const clonedNewWorkout = { ...this.state.newWorkout }
         clonedNewWorkout[event.target.name] = event.target.value

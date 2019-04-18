@@ -20,7 +20,7 @@ export default class Recipes extends Component {
     }
 
 
-    fetchRecipes = async (recipeId) => {
+    fetchRecipes = async () => {
         try {
             const response = await axios.get(`/api/v1/recipes`)
             this.setState({
@@ -29,6 +29,38 @@ export default class Recipes extends Component {
         }
         catch (err) {
             console.log(`You made an error, Jess!`, err)
+        }
+    }
+    // Recipe Handle Change
+    handleRecipeChange = (event) => {
+        const clonedNewRecipe = { ...this.state.newRecipe }
+        clonedNewRecipe[event.target.name] = event.target.value
+
+        this.setState({
+            newRecipe: clonedNewRecipe
+        })
+    }
+
+    createRecipe = async (event) => {
+        event.preventDefault()
+        try {
+            const response = await axios.post('/api/v1/recipes/', this.state.newRecipe)
+
+            const clonedRecipes = [...this.state.recipes]
+            clonedRecipes.push(response.data)
+            this.setState({
+                recipes: clonedRecipes,
+                newRecipe: {
+                    name: '',
+                    image_url: '',
+                    calories: '',
+                    prep_time: '',
+                    directions: ''
+                }
+            })
+        }
+        catch (err) {
+            console.log(`You have a POST error, Jess!`, err)
         }
     }
     render() {
@@ -55,7 +87,12 @@ export default class Recipes extends Component {
                     )
                 })}
                 <h1>Create Recipe</h1>
-                <RecipeForm />
+                <RecipeForm
+                    newRecipe={this.state.newRecipe}
+                    handleSubmit={this.createRecipe}
+                    handleRecipeChange={this.handleRecipeChange}
+                    submitBtnText="Create"
+                />
             </div>
         )
     }
