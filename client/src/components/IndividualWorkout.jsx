@@ -5,7 +5,7 @@ import WorkoutForm from './WorkoutForm.jsx'
 
 export default class IndividualWorkout extends Component {
     state = {
-        workouts: {},
+        workout: {},
         exercises: [],
         redirectToWorkouts: false,
         isEditFormDisplayed: false
@@ -20,7 +20,7 @@ export default class IndividualWorkout extends Component {
         try {
             const response = await axios.get(`/api/v1/workouts/${workoutId}/`)
             this.setState({
-                workouts: response.data,
+                workout: response.data,
                 exercises: response.data.songs
             })
         }
@@ -40,24 +40,67 @@ export default class IndividualWorkout extends Component {
             console.log(`Didn't delete, Jess!`, err)
         }
     }
+
+    updateWorkout = async (event) => {
+        event.preventDefault()
+        try {
+            const response = await axios.put(`/api/v1/workouts/${this.props.match.params.id}/`, this.state.workout)
+            this.setState({
+                workout: response.data,
+                isEditFormDisplayed: false
+            })
+        }
+        catch (err) {
+            console.log(`You didn't update!`, err)
+        }
+    }
+    // Edit Handle Change
+    handleChange = (event) => {
+        const clonedWorkout = { ...this.state.workout }
+        clonedWorkout[event.target.name] = event.target.value
+
+        this.setState({
+            workout: clonedWorkout
+        })
+    }
+
+    toggleEditForm = () => {
+        this.setState((state, props) => {
+            return { isEditFormDisplayed: !state.isEditFormDisplayed }
+        })
+    }
+
     render() {
         if (this.state.redirectToWorkouts === true) {
             return <Redirect to="/workouts" />
         }
         return (
             <div>
-                <h1>Individual IndividualWorkout</h1>
+                <h1>IndividualWorkout</h1>
                 <button onClick={this.deleteWorkout}>
                     Delete
                 </button>
                 <div className="card bg-dark text-white" style={{ maxWidth: '700px' }}>
-                    <img className="card-img" src={this.state.workouts.image_url} alt={this.state.workouts.name} />
+                    <img className="card-img" src={this.state.workout.image_url} alt={this.state.workout.name} />
                     <div className="card-img-overlay">
-                        <h5 className="card-title">{this.state.workouts.name}</h5>
-                        <p className="card-text">{this.state.workouts.target}</p>
-                        <p className="card-text">{this.state.workouts.workout_time}</p>
+                        <h5 className="card-title">{this.state.workout.name}</h5>
+                        <p className="card-text">{this.state.workout.target}</p>
+                        <p className="card-text">{this.state.workout.workout_time}</p>
                     </div>
                 </div>
+                <button onClick={this.toggleEditForm}>
+                    {this.state.isEditFormDisplayed === true ? 'Hide Edit Form' : 'Edit'}
+                </button>
+                {
+                    this.state.isEditFormDisplayed
+                        ? <WorkoutForm
+                            workout={this.state.workout}
+                            handleChange={this.handleChange}
+                            handleSubmit={this.updateWorkout}
+                            submitBtnText="Update"
+                        />
+                        : null
+                }
             </div>
         )
     }

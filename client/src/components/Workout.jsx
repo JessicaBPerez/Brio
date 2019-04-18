@@ -99,7 +99,7 @@ export default class Workout extends Component {
                 <WorkoutForm
                     workout={this.state.newWorkout}
                     handleChange={this.handleChange}
-                    createWorkout={this.createWorkout}
+                    handleSubmit={this.createWorkout}
                     submitBtnText="Create"
                 />
             </div>

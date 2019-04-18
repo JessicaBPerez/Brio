@@ -5,7 +5,7 @@ export default function WorkoutForm(props) {
     return (
         <div>
             <h1>Workout Form</h1>
-            <form onSubmit={props.createWorkout}>
+            <form onSubmit={props.handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label>
                     <input
