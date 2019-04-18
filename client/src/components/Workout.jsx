@@ -28,6 +28,38 @@ export default class Workout extends Component {
         }
     }
 
+    createWorkout = async (event) => {
+        event.preventDefault()
+        try {
+            const response = await axios.post(`/api/v1/workouts/`, this.state.newWorkout)
+
+            const clonedWorkouts = [this.state.workouts]
+            clonedWorkouts.push(response.date)
+            this.setState({
+                workouts: clonedWorkouts,
+                newWorkout: {
+                    name: '',
+                    image_url: '',
+                    target: '',
+                    workout_time: ''
+                }
+            })
+        }
+        catch (err) {
+            console.log(`You got a POST error, Jess!`, err)
+        }
+    }
+
+    // Handle form change
+    handleChange = (event) => {
+        const clonedNewWorkout = { ...this.state.newWorkout }
+        clonedNewWorkout[event.target.name] = event.target.value
+
+        this.setState({
+            newWorkout: clonedNewWorkout
+        })
+    }
+
     render() {
         if (this.state.error) {
             return <div>{this.state.error}</div>
@@ -42,13 +74,13 @@ export default class Workout extends Component {
                             {/* <h3>{workout.name}</h3>
                             <img src={workout.image_url} alt={workout.name} /> */}
                             <Link to={`/workouts/${workout.id}/`}>{workout.name}</Link>
-                            <div class="card bg-dark text-white" style={{ maxWidth: '700px' }}>
-                                <img class="card-img" src={workout.image_url} alt={workout.name} />
-                                <div class="card-img-overlay">
-                                    <h5 class="card-title">{workout.name}</h5>
-                                    <p class="card-text"><Link to={`/workouts/${workout.id}/`}>{workout.name}</Link></p>
-                                    <p class="card-text">{workout.target}</p>
-                                    <p class="card-text">{workout.workout_time}</p>
+                            <div className="card bg-dark text-white" style={{ maxWidth: '700px' }}>
+                                <img className="card-img" src={workout.image_url} alt={workout.name} />
+                                <div className="card-img-overlay">
+                                    <h5 className="card-title">{workout.name}</h5>
+                                    <p className="card-text"><Link to={`/workouts/${workout.id}/`}>{workout.name}</Link></p>
+                                    <p className="card-text">{workout.target}</p>
+                                    <p className="card-text">{workout.workout_time}</p>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +90,7 @@ export default class Workout extends Component {
                 <WorkoutForm
                     workout={this.state.newWorkout}
                     handleChange={this.handleChange}
-                    handleSubmit={this.createWorkout}
+                    createWorkout={this.createWorkout}
                     submitBtnText="Create"
                 />
             </div>
