@@ -12,6 +12,7 @@ export default class IndividualWorkout extends Component {
         newExercise: {
             name: 'holder value',
             exercise_target: 'holder value',
+            time: 'holder value',
             video_url: 'holder value',
             workout_time: 'holder value',
             description: 'holder value',
@@ -64,6 +65,7 @@ export default class IndividualWorkout extends Component {
                 newExercise: {
                     name: '',
                     exercise_target: '',
+                    time: '',
                     video_url: '',
                     workout_time: '',
                     description: '',

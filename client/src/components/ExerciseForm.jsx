@@ -15,7 +15,7 @@ export default function ExerciseForm(props) {
                         onChange={props.handleExerciseChange}
                     />
                 </div>
-                {/* <div>
+                <div>
                     <label htmlFor="exercise_target">Exercise Target:</label>
                     <input
                         type="text"
@@ -64,7 +64,7 @@ export default function ExerciseForm(props) {
                         value={props.newExercise.benefits}
                         onChange={props.handleExerciseChange}
                     />
-                </div> */}
+                </div>
                 <button>{props.submitBtnText}</button>
             </form>
         </div>
