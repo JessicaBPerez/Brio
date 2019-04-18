@@ -26,7 +26,6 @@ export default class IndividualWorkout extends Component {
     componentDidMount() {
         const workoutId = this.props.match.params.id
         this.fetchWorkout(workoutId)
-        // this.fetchExercises()
     }
 
     fetchWorkout = async (workoutId) => {
@@ -41,16 +40,6 @@ export default class IndividualWorkout extends Component {
             console.log(`You made an error, Jess!`, err)
         }
     }
-
-    // fetchExercises = async () => {
-    //     try {
-    //         const response = await axios.get('/api/v1/exercises/')
-    //         this.setState({ exercises: response.data })
-    //     }
-    //     catch (err) {
-    //         console.log(`You didn't get the exercises!`, err)
-    //     }
-    // }
 
     createExercise = async (event, exercise, id) => {
         event.preventDefault()
@@ -71,13 +60,6 @@ export default class IndividualWorkout extends Component {
                     description: '',
                     benefits: '',
                     workout: ''
-                    // name: exercise.name,
-                    // exercise_target: exercise.exercise_target,
-                    // video_url: exercise.video_url,
-                    // workout_time: exercise.workout_time,
-                    // description: exercise.description,
-                    // benefits: exercise.benefits,
-                    // workout: id
                 }
             })
         }
