@@ -2,19 +2,21 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import WorkoutForm from './WorkoutForm.jsx'
+import { Link } from 'react-router-dom'
+import ExerciseForm from './ExerciseForm.jsx'
 
 export default class IndividualWorkout extends Component {
     state = {
         workout: {},
         exercises: [],
         newExercise: {
-            name: '',
-            exercise_target: '',
-            video_url: '',
-            workout_time: '',
-            description: '',
-            benefits: '',
-            workout: ''
+            name: 'holder value',
+            exercise_target: 'holder value',
+            video_url: 'holder value',
+            workout_time: 'holder value',
+            description: 'holder value',
+            benefits: 'holder value',
+            workout: this.props.match.params.id
         },
         redirectToWorkouts: false,
         isEditFormDisplayed: false
@@ -23,7 +25,7 @@ export default class IndividualWorkout extends Component {
     componentDidMount() {
         const workoutId = this.props.match.params.id
         this.fetchWorkout(workoutId)
-        this.fetchExercises()
+        // this.fetchExercises()
     }
 
     fetchWorkout = async (workoutId) => {
@@ -39,14 +41,56 @@ export default class IndividualWorkout extends Component {
         }
     }
 
-    fetchExercises = async () => {
+    // fetchExercises = async () => {
+    //     try {
+    //         const response = await axios.get('/api/v1/exercises/')
+    //         this.setState({ exercises: response.data })
+    //     }
+    //     catch (err) {
+    //         console.log(`You didn't get the exercises!`, err)
+    //     }
+    // }
+
+    createExercise = async (event, exercise, id) => {
+        event.preventDefault()
+        console.log(this.state.newExercise)
         try {
-            const response = await axios.get('/api/v1/exercises/')
-            this.setState({ exercises: response.data })
+            const response = await axios.post('/api/v1/exercises/', this.state.newExercise)
+
+            const clonedExercises = [...this.state.exercises]
+            clonedExercises.push(response.data)
+            this.setState({
+                exercises: clonedExercises,
+                newExercise: {
+                    name: '',
+                    exercise_target: '',
+                    video_url: '',
+                    workout_time: '',
+                    description: '',
+                    benefits: '',
+                    workout: ''
+                    // name: exercise.name,
+                    // exercise_target: exercise.exercise_target,
+                    // video_url: exercise.video_url,
+                    // workout_time: exercise.workout_time,
+                    // description: exercise.description,
+                    // benefits: exercise.benefits,
+                    // workout: id
+                }
+            })
         }
         catch (err) {
-            console.log(`You didn't get the exercises!`, err)
+            console.log(`You have a POST error in exercises, Jess!`, err)
         }
+    }
+
+    handleExerciseChange = (event) => {
+        const clonedNewExercise = { ...this.state.newExercise }
+        clonedNewExercise[event.target.name] = event.target.value
+
+        this.setState({
+            newExercise: clonedNewExercise
+        })
     }
 
     deleteWorkout = async () => {
@@ -74,7 +118,7 @@ export default class IndividualWorkout extends Component {
             console.log(`You didn't update!`, err)
         }
     }
-    // Edit Handle Change
+    // Edit Workout Handle Change
     handleChange = (event) => {
         const clonedWorkout = { ...this.state.workout }
         clonedWorkout[event.target.name] = event.target.value
@@ -93,6 +137,10 @@ export default class IndividualWorkout extends Component {
     render() {
         if (this.state.redirectToWorkouts === true) {
             return <Redirect to="/workouts" />
+        }
+
+        if (this.state.error) {
+            return <div>{this.state.error}</div>
         }
         return (
             <div>
@@ -130,6 +178,7 @@ export default class IndividualWorkout extends Component {
                                     <div>{exercise.video_url}</div>
                                     <div>{exercise.target}</div>
                                     <div>{exercise.time}</div>
+                                    <Link to={`/exercise/${exercise.id}/`}>{exercise.name}</Link>
                                     {/* <div>{exercise.image_url}</div> */}
                                     <div>{exercise.description}</div>
                                     <div>{exercise.benefits}</div>
@@ -138,6 +187,14 @@ export default class IndividualWorkout extends Component {
                         })
                     }
                 </div>
+                <h1>Create Exercise</h1>
+                <ExerciseForm
+                    newExercise={this.state.newExercise}
+                    handleExerciseChange={this.handleExerciseChange}
+                    handleExerciseSubmit={this.createExercise}
+                    submitBtnText="Create"
+                    workoutId={this.props.match.params.id}
+                />
             </div>
         )
     }

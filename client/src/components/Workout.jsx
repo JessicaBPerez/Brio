@@ -37,7 +37,7 @@ export default class Workout extends Component {
             clonedWorkouts.push(response.data)
             this.setState({
                 workouts: clonedWorkouts,
-                newArtist: {
+                newWorkout: {
                     name: '',
                     image_url: '',
                     target: '',
