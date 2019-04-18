@@ -23,6 +23,7 @@ export default class IndividualWorkout extends Component {
     componentDidMount() {
         const workoutId = this.props.match.params.id
         this.fetchWorkout(workoutId)
+        this.fetchExercises()
     }
 
     fetchWorkout = async (workoutId) => {
@@ -35,6 +36,16 @@ export default class IndividualWorkout extends Component {
         }
         catch (err) {
             console.log(`You made an error, Jess!`, err)
+        }
+    }
+
+    fetchExercises = async () => {
+        try {
+            const response = await axios.get('/api/v1/exercises/')
+            this.setState({ exercises: response.data })
+        }
+        catch (err) {
+            console.log(`You didn't get the exercises!`, err)
         }
     }
 
