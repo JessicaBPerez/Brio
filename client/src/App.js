@@ -4,6 +4,7 @@ import './App.css';
 import Home from './components/Home.jsx'
 import Navbar from './components/Navbar.jsx'
 import Workout from './components/Workout';
+import IndividualWorkout from './components/IndividualWorkout';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/workouts' component={Workout} />
+              <Route path='/workouts/:id' component={IndividualWorkout} />
             </Switch>
 
           </div>

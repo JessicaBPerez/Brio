@@ -11,7 +11,7 @@ class Home extends Component {
                 <div className="content">
                     <h1>Heading</h1>
                     <p>Lorem ipsum...</p>
-                    <button id="myBtn" onclick="myFunction()">Pause</button>
+                    <button id="myBtn" onClick="myFunction()">Pause</button>
                 </div>
             </div >
         )
