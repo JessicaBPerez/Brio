@@ -7,6 +7,15 @@ export default class IndividualWorkout extends Component {
     state = {
         workout: {},
         exercises: [],
+        newExercise: {
+            name: '',
+            exercise_target: '',
+            video_url: '',
+            workout_time: '',
+            description: '',
+            benefits: '',
+            workout: ''
+        },
         redirectToWorkouts: false,
         isEditFormDisplayed: false
     }
@@ -21,7 +30,7 @@ export default class IndividualWorkout extends Component {
             const response = await axios.get(`/api/v1/workouts/${workoutId}/`)
             this.setState({
                 workout: response.data,
-                exercises: response.data.songs
+                exercises: response.data.exercises
             })
         }
         catch (err) {
@@ -101,6 +110,23 @@ export default class IndividualWorkout extends Component {
                         />
                         : null
                 }
+                <div>
+                    {
+                        this.state.exercises.map(exercise => {
+                            return (
+                                <div key={exercise.id}>
+                                    <h4>{exercise.name}</h4>
+                                    <div>{exercise.video_url}</div>
+                                    <div>{exercise.target}</div>
+                                    <div>{exercise.time}</div>
+                                    {/* <div>{exercise.image_url}</div> */}
+                                    <div>{exercise.description}</div>
+                                    <div>{exercise.benefits}</div>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
         )
     }
