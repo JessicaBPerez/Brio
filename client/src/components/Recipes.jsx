@@ -88,7 +88,7 @@ export default class Recipes extends Component {
                 })}
                 <h1>Create Recipe</h1>
                 <RecipeForm
-                    newRecipe={this.state.newRecipe}
+                    recipe={this.state.newRecipe}
                     handleSubmit={this.createRecipe}
                     handleRecipeChange={this.handleRecipeChange}
                     submitBtnText="Create"

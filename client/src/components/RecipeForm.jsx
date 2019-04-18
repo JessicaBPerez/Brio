@@ -12,7 +12,7 @@ export default function RecipeForm(props) {
                         type="text"
                         id="name"
                         name="name"
-                        value={props.newRecipe.name}
+                        value={props.recipe.name}
                         onChange={props.handleRecipeChange}
                     />
                 </div>
@@ -22,7 +22,7 @@ export default function RecipeForm(props) {
                         type="text"
                         id="image_url"
                         name="image_url"
-                        value={props.newRecipe.image_url}
+                        value={props.recipe.image_url}
                         onChange={props.handleRecipeChange}
                     />
                 </div>
@@ -32,7 +32,7 @@ export default function RecipeForm(props) {
                         type="text"
                         id="calories"
                         name="calories"
-                        value={props.newRecipe.calories}
+                        value={props.recipe.calories}
                         onChange={props.handleRecipeChange}
                     />
                 </div>
@@ -42,7 +42,7 @@ export default function RecipeForm(props) {
                         type="text"
                         id="prep_time"
                         name="prep_time"
-                        value={props.newRecipe.prep_time}
+                        value={props.recipe.prep_time}
                         onChange={props.handleRecipeChange}
                     />
                 </div>
@@ -52,7 +52,7 @@ export default function RecipeForm(props) {
                         type="text"
                         id="directions"
                         name="directions"
-                        value={props.newRecipe.directions}
+                        value={props.recipe.directions}
                         onChange={props.handleRecipeChange}
                     />
                 </div>
