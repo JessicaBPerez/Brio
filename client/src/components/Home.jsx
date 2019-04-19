@@ -17,8 +17,10 @@ class Home extends Component {
                     <source src={Workoutz} type="video/mov" />
                     Your browser does not support the video tag.
                 </video>
-                <div>
-                    <h1 className="brio-main overlay-desc">Brio</h1>
+                <div className="overlay-desc brio-headline">
+                    <h5 className="brio-text">Headline Text Here</h5>
+                    <h1 className="brio-text">Brio</h1>
+                    <h3 className="brio-text">Maybe another thing here</h3>
                 </div>
                 {/* <div class=""> */}
                 {/* <video autoplay loop>

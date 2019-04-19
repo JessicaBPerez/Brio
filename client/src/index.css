@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Cinzel+Decorative|Fira+Sans|Galada|Lato|Lobster|Lora|Merriweather|Pattaya|Questrial|Quicksand');
 .background-video {
     height: 100%;
     width: 100%;
@@ -525,7 +526,12 @@ video {
 
 .brio-text {
     color: white;
-    font-family: 'Nobile', sans-serif;
+    font-family: 'Lobster', sans-serif;
     font-size: 9vw;
     text-align: center;
+}
+
+.brio-headline {
+    display: flex;
+    flex-direction: column;
 }
