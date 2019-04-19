@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import WorkoutVideo from '../video/Workout.mov'
 
 class Home extends Component {
 
@@ -14,8 +13,7 @@ class Home extends Component {
                     <button id="myBtn" onClick="myFunction()">Pause</button>
                 </div> */}
                 <video id="background-video" loop autoPlay>
-                    <source src={WorkoutVideo} type="video/mp4" />
-                    <source src={WorkoutVideo} type="video/mov" />
+
                     Your browser does not support the video tag.
                 </video>
             </div >
