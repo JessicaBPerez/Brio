@@ -52,7 +52,7 @@ export default function RecipeForm(props) {
                         type="text"
                         id="directions"
                         name="directions"
-                        value={props.recipe.directions}
+                        value={props.directions}
                         onChange={props.handleRecipeChange}
                     />
                 </div>

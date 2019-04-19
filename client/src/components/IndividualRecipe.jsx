@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import RecipeForm from './RecipeForm'
+import IngredientForm from './IngredientForm'
 
 export default class IndividualRecipe extends Component {
     state = {
@@ -12,12 +13,14 @@ export default class IndividualRecipe extends Component {
             recipe: this.props.match.params.id
         },
         redirectToRecipes: false,
-        isEditFormDisplayed: false
+        isEditFormDisplayed: false,
+        redirectToIngredientId: false,
     }
 
     componentDidMount() {
         const recipeId = this.props.match.params.id
         this.fetchRecipe(recipeId)
+        // this.fetchIngredientz()
     }
 
     fetchRecipe = async (recipeId) => {
@@ -25,13 +28,26 @@ export default class IndividualRecipe extends Component {
             const response = await axios.get(`/api/v1/recipes/${recipeId}/`)
             this.setState({
                 recipe: response.data,
-                ingredients: response.data.exercises
+                ingredients: response.data.ingredients
             })
         }
         catch (err) {
             console.log(`You made an error, Jess!`, err)
         }
     }
+
+    // fetchIngredientz = async (ingredientId) => {
+    //     try {
+    //         const response = await axios.get(`/api/v1/ingredients/${ingredientId}/`)
+    //         this.setState({
+    //             ingredient: response.data,
+    //         })
+    //     }
+    //     catch (err) {
+    //         console.log(`You made an error, Jess!`, err)
+    //     }
+    // }
+
 
     createIngredient = async (event, ingredient, id) => {
         event.preventDefault()
@@ -105,10 +121,30 @@ export default class IndividualRecipe extends Component {
         }
     }
 
+    // Delete Ingredient
+    deleteIngredient = async (ingredientId) => {
+        try {
+            const response = await axios.delete(`/api/v1/ingredients/${ingredientId}/`).then(() => {
+                // return <Redirect to={`/recipes/${this.props.match.params.id}`} />
+                this.fetchRecipe(this.props.match.params.id)
+            })
+            // this.setState({
+            //     redirectToIngredientId: true
+            // })
+        }
+        catch (err) {
+            console.log(`Didn't delete ingredients, Jess!`, err)
+        }
+    }
+
     render() {
         if (this.state.redirectToRecipes === true) {
             return <Redirect to="/recipes" />
         }
+
+        // if (this.state.redirectToIngredientId === true) {
+        //     return <Redirect to={`/recipes/${this.props.match.params.id}`} />
+        // }
         return (
             <div>
                 <h1>Individual Recipe</h1>
@@ -137,6 +173,27 @@ export default class IndividualRecipe extends Component {
                         />
                         : null
                 }
+                <div>
+                    {this.state.ingredients.map(ingredient => {
+                        return (
+                            <div key={ingredient.id}>
+                                {/* () => {this.deleteIngredient(ingredient.id)} */}
+                                <button onClick={() => this.deleteIngredient(ingredient.id)} type="button" className="close" aria-label="Close"><h2>{ingredient.name}</h2>
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+
+                            </div>
+                        )
+                    })}
+                </div>
+                <h1>Add Ingredient</h1>
+                <IngredientForm
+                    newIngredient={this.state.newIngredient}
+                    handleIngredientChange={this.handleIngredientChange}
+                    handleIngredientSubmit={this.createIngredient}
+                    submitBtnText="Create"
+                    ingredientId={this.props.match.params.id}
+                />
             </div>
         )
     }
