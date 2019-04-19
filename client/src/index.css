@@ -1,4 +1,4 @@
-/* .background-video {
+.background-video {
     height: 100%;
     width: 100%;
     float: left;
@@ -7,6 +7,12 @@
     position: fixed;
 }
 
+.brio-main {
+    z-index: 3;
+}
+
+
+/*
 .video-overlay {
     position: absolute;
     top: 0;
@@ -33,14 +39,6 @@ video,
 
 
 /* Style the video: 100% width and height to cover the entire window */
-
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-}
 
 
 /* Add some content at the bottom of the video/page */
@@ -502,3 +500,32 @@ a {
 }
 
 .margin-bottom {}
+
+.video-container {
+    position: relative;
+}
+
+video {
+    height: auto;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.overlay-desc {
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brio-text {
+    color: white;
+    font-family: 'Nobile', sans-serif;
+    font-size: 9vw;
+    text-align: center;
+}

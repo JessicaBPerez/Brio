@@ -12,11 +12,25 @@ class Home extends Component {
                     <p>Lorem ipsum...</p>
                     <button id="myBtn" onClick="myFunction()">Pause</button>
                 </div> */}
-                <video id="background-video" loop autoPlay>
+                {/* <video id="background-video" loop autoPlay>
                     <source src={Workoutz} type="video/mp4" />
                     <source src={Workoutz} type="video/mov" />
                     Your browser does not support the video tag.
                 </video>
+                <div>
+                    <h1 className="brio-main">Brio</h1>
+                </div> */}
+                <div class="video-container">
+                    <video autoplay loop>
+                        <source src={Workoutz} type="video/mp4" />
+                        <source src={Workoutz} type="video/mov" />
+                        Your browser does not support the video tag.
+	                </video>
+                    <div class="overlay-desc">
+                        {/* <h1 className="brio-text">Brio</h1> */}
+                    </div>
+                </div>
+
             </div >
         )
     }
