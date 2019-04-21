@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Workoutz from '../video/Workoutz.mov'
 import Navbar from './Navbar';
+import { Link } from "react-router-dom"
 
 class Home extends Component {
 
@@ -16,9 +17,6 @@ class Home extends Component {
                     </video>
                     <div className="overlay-desc brio-headline">
                         <h1 className="brio-text centered">Brio</h1>
-                        <div className="home-margin">
-                            <a className="btn btn-primary btn-xl rounded-pill mt-5 home-margin" role="button" href="/">Change Your Life</a>
-                        </div>
                         {/* <div className="estrellas centered">
                             <span>★</span>
                             <span>★</span>
@@ -29,6 +27,9 @@ class Home extends Component {
                             <span>★</span>
                         </div> */}
                     </div>
+                </div>
+                <div className="home-margin">
+                    <Link to={`/workouts`} className="btn btn-primary btn-xl rounded-pill mt-5 home-margin">Change Your Life</Link>
                 </div>
             </div >
         )
