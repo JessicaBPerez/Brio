@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Workoutz from '../video/Workoutz.mov'
-import VideoCover from 'react-video-cover'
 import Navbar from './Navbar';
 
 class Home extends Component {
@@ -17,8 +16,8 @@ class Home extends Component {
                     </video>
                     <div className="overlay-desc brio-headline">
                         <h1 className="brio-text centered">Brio</h1>
-                        <div>
-                            <a className="btn btn-primary btn-xl rounded-pill mt-5 home-margin" role="button" href="/">Add A School</a>
+                        <div className="home-margin">
+                            <a className="btn btn-primary btn-xl rounded-pill mt-5 home-margin" role="button" href="/">Change Your Life</a>
                         </div>
                         {/* <div className="estrellas centered">
                             <span>★</span>
