@@ -82,7 +82,7 @@
 .brio-text {
     color: white;
     font-family: 'Lobster', sans-serif;
-    font-size: 9vw;
+    font-size: 9.5rem;
     text-align: center;
 }
 
@@ -280,5 +280,5 @@ a {
 }
 
 .home-margin {
-    margin-top: 30rem;
+    margin-top: 28rem;
 }
