@@ -77,18 +77,22 @@ export default class Recipes extends Component {
                 <h1>All Recipes</h1>
                 {this.state.recipes.map(recipe => {
                     return (
-                        <div key={recipe.id}>
-                            {/* <h3>{workout.name}</h3>
-                            <img src={workout.image_url} alt={workout.name} /> */}
-                            <Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link>
-                            <div className="card bg-dark text-white" style={{ maxWidth: '700px' }}>
+                        <div key={recipe.id} className="flex-container card-flex">
+                            {/* <Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link> */}
+                            <div className="card bg-dark text-white" style={{ maxWidth: '600px' }}>
                                 <img className="card-img" src={recipe.image_url} alt={recipe.name} />
+                                <div class="card-body">
+                                    <h5 className="card-title">{recipe.name}</h5>
+                                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                                    <p className="card-text"><Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link></p>
+                                </div>
                                 <div className="card-img-overlay">
                                     <h5 className="card-title">{recipe.name}</h5>
                                     <p className="card-text"><Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link></p>
                                     <p className="card-text">{recipe.calories}</p>
                                     <p className="card-text">{recipe.prep_time}</p>
-                                    <p className="card-text">{recipe.directions}</p>
+                                    {/* <p className="card-text">{recipe.directions}</p> */}
                                 </div>
                             </div>
                         </div>

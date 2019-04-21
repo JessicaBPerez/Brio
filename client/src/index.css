@@ -302,3 +302,9 @@ a {
     font-size: 9vw;
     font-weight: bold;
 }
+
+.card-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
