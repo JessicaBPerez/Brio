@@ -17,6 +17,9 @@ class Home extends Component {
                     </video>
                     <div className="overlay-desc brio-headline">
                         <h1 className="brio-text centered">Brio</h1>
+                        <div>
+                            <a className="btn btn-primary btn-xl rounded-pill mt-5 home-margin" role="button" href="/">Add A School</a>
+                        </div>
                         {/* <div className="estrellas centered">
                             <span>★</span>
                             <span>★</span>
