@@ -24,7 +24,7 @@ class Navbar extends Component {
                     </div>
                 </nav> */}
                 <nav
-                    className="navbar navbar-dark navbar-expand-lg fixed-top navbarstyle"
+                    className="navbar navbar-dark navbar-expand-lg fixed-top"
                     id="mainNav"
                 >
                     <div className="container">
