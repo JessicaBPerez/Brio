@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Cinzel+Decorative|Fira+Sans|Galada|Lato|Lobster|Lora|Merriweather|Pattaya|Questrial|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Anton|Cinzel+Decorative|Fira+Sans|Galada|Lato|Lobster|Lora|Merriweather|Pattaya|Playfair+Display|Questrial|Quicksand');
 .background-video {
     height: 100%;
     width: 100%;
@@ -535,3 +535,72 @@ video {
     display: flex;
     flex-direction: column;
 }
+
+
+/* Headline Curve */
+
+.estrellas {
+    position: relative;
+    width: 420px;
+    height: 200px;
+    margin: 0 auto;
+    font-size: 70px;
+}
+
+.estrellas span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 70px;
+    height: 300px;
+    margin-left: -35px;
+    line-height: 530px;
+    /* height*2 - font-size */
+    text-align: center;
+    transform-origin: top center;
+}
+
+.estrellas span:nth-of-type(1) {
+    transform: rotate(75deg);
+}
+
+.estrellas span:nth-of-type(2) {
+    transform: rotate(50deg);
+}
+
+.estrellas span:nth-of-type(3) {
+    transform: rotate(25deg);
+}
+
+.estrellas span:nth-of-type(4) {
+    transform: rotate(0deg);
+}
+
+.estrellas span:nth-of-type(5) {
+    transform: rotate(-25deg);
+}
+
+.estrellas span:nth-of-type(6) {
+    transform: rotate(-50deg);
+}
+
+.estrellas span:nth-of-type(7) {
+    transform: rotate(-75deg);
+}
+
+
+/* Inverse Here */
+
+.inverso {
+    font-weight: bold;
+}
+
+.inverso span {
+    line-height: 70px;
+    transform-origin: bottom center;
+    border: ;
+    /* Only for seeing trick */
+}
+
+
+/* NEW CSS */
