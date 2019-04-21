@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import WorkoutForm from './WorkoutForm.jsx'
+import NavbarPage from './NavbarPage.jsx';
 
 export default class Workout extends Component {
     state = {
@@ -66,6 +67,7 @@ export default class Workout extends Component {
 
         return (
             <div>
+                <NavbarPage />
                 <h1>All Workouts</h1>
                 {this.state.workouts.map(workout => {
                     return (

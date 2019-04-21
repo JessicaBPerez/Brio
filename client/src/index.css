@@ -60,7 +60,9 @@
     padding: 20px;
 }
 
-.margin-bottom {}
+.margin-bottom {
+    margin-bottom: 15rem;
+}
 
 
 /* Brio Text */

@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import RecipeForm from './RecipeForm'
 import IngredientForm from './IngredientForm'
+import NavbarPage from './NavbarPage';
 
 export default class IndividualRecipe extends Component {
     state = {
@@ -35,18 +36,6 @@ export default class IndividualRecipe extends Component {
             console.log(`You made an error, Jess!`, err)
         }
     }
-
-    // fetchIngredientz = async (ingredientId) => {
-    //     try {
-    //         const response = await axios.get(`/api/v1/ingredients/${ingredientId}/`)
-    //         this.setState({
-    //             ingredient: response.data,
-    //         })
-    //     }
-    //     catch (err) {
-    //         console.log(`You made an error, Jess!`, err)
-    //     }
-    // }
 
 
     createIngredient = async (event, ingredient, id) => {
@@ -147,6 +136,7 @@ export default class IndividualRecipe extends Component {
         // }
         return (
             <div>
+                <NavbarPage />
                 <h1>Individual Recipe</h1>
                 <button onClick={this.deleteRecipe}>
                     Delete Recipe

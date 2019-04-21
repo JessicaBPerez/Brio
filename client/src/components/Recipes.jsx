@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import RecipeForm from './RecipeForm.jsx'
+import NavbarPage from './NavbarPage.jsx';
 
 export default class Recipes extends Component {
     state = {
@@ -66,6 +67,7 @@ export default class Recipes extends Component {
     render() {
         return (
             <div>
+                <NavbarPage />
                 <h1>All Recipes</h1>
                 {this.state.recipes.map(recipe => {
                     return (

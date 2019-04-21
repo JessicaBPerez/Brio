@@ -13,7 +13,6 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Navbar />
         <div className="App">
           <div>
 

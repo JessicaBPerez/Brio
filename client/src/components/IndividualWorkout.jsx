@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom'
 import WorkoutForm from './WorkoutForm.jsx'
 import { Link } from 'react-router-dom'
 import ExerciseForm from './ExerciseForm.jsx'
+import NavbarPage from './NavbarPage.jsx';
 
 export default class IndividualWorkout extends Component {
     state = {
@@ -128,6 +129,7 @@ export default class IndividualWorkout extends Component {
         }
         return (
             <div>
+                <NavbarPage />
                 <h1>IndividualWorkout</h1>
                 <button onClick={this.deleteWorkout}>
                     Delete
