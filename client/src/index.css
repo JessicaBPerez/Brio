@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Anton|Cinzel+Decorative|Fira+Sans|Galada|Lato|Lobster|Lora|Merriweather|Pattaya|Playfair+Display|Questrial|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Merriweather+Sans|Mukta');
 .background-video {
     height: 100%;
     width: 100%;
@@ -281,4 +282,23 @@ a {
 
 .home-margin {
     margin-top: 26rem;
+}
+
+.workout-margin {
+    margin-top: 4.5rem;
+}
+
+
+/* Workout Jumbo */
+
+.workout-jumbo {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.workout-text {
+    font-family: "josefin sans";
+    font-size: 9vw;
+    font-weight: bold;
 }

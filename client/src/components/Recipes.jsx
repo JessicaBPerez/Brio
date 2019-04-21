@@ -68,6 +68,12 @@ export default class Recipes extends Component {
         return (
             <div>
                 <NavbarPage />
+                <div className="bg-dark text-white workout-margin workout-jumbo">
+                    <img className="card-img" src="https://foodrevolution.org/wp-content/uploads/2019/01/iStock-855098134-marilyna-featured.jpg" alt="Workout" />
+                    <div className="card-img-overlay">
+                        <h5 className="card-title centered workout-text">RECIPES</h5>
+                    </div>
+                </div>
                 <h1>All Recipes</h1>
                 {this.state.recipes.map(recipe => {
                     return (

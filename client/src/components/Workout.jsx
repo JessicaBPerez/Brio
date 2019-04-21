@@ -68,19 +68,10 @@ export default class Workout extends Component {
         return (
             <div>
                 <NavbarPage />
-                {/* <div class="">
-                    <div class="container-fluid">
-                        <img className="image-fluid" src="https://media.self.com/photos/57dc11208a461ae034a90dc8/8:3/w_1280,c_limit/sub-channel-fitness-workouts.jpg" />
-                        <h1 class="display-4">Fluid jumbotron</h1>
-                        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-                    </div>
-                </div> */}
-                <div class="bg-dark text-white">
-                    <img class="card-img" src="https://media.self.com/photos/57dc11208a461ae034a90dc8/8:3/w_1280,c_limit/sub-channel-fitness-workouts.jpg" alt="Card image" />
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
+                <div className="bg-dark text-white workout-margin workout-jumbo">
+                    <img className="card-img" src="https://media.self.com/photos/57dc11208a461ae034a90dc8/8:3/w_1280,c_limit/sub-channel-fitness-workouts.jpg" alt="Workout" />
+                    <div className="card-img-overlay">
+                        <h5 className="card-title centered workout-text">WORKOUTS</h5>
                     </div>
                 </div>
 

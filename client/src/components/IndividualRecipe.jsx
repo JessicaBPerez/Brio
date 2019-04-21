@@ -137,7 +137,7 @@ export default class IndividualRecipe extends Component {
         return (
             <div>
                 <NavbarPage />
-                <h1>Individual Recipe</h1>
+                <h1 className="workout-margin">Individual Recipe</h1>
                 <button onClick={this.deleteRecipe}>
                     Delete Recipe
                 </button>
