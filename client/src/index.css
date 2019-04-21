@@ -8,12 +8,45 @@
     position: fixed;
 }
 
-.brio-main {
-    z-index: 3;
+
+/* Navbar */
+
+@media (min-width:992px) {
+    #mainNav {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        transition: padding-top .3s, padding-bottom .3s;
+        border: none;
+        background-color: transparent;
+    }
 }
 
+.navbarstyle {
+    background-image: url('https://www.readersdigest.ca/wp-content/uploads/sites/14/2017/03/history-of-the-easter-bunny.jpg');
+}
 
-/* Style the video: 100% width and height to cover the entire window */
+.brand-properties {
+    font-family: Orbitron;
+}
+
+.navbar-brand {
+    font-size: 2.2rem!important;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255)!important;
+    font-family: "Josefin sans";
+    font-size: 1.1rem;
+}
+
+.card-margin {
+    margin-top: 3rem;
+}
+
+.navbar-dark .navbar-toggler {
+    color: hsla(0, 0%, 100%, .5);
+    border-color: hsla(0, 0%, 100%, .1);
+}
 
 
 /* Add some content at the bottom of the video/page */
@@ -26,9 +59,6 @@
     width: 100%;
     padding: 20px;
 }
-
-
-/* Navbar */
 
 .margin-bottom {}
 
