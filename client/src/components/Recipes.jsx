@@ -77,22 +77,17 @@ export default class Recipes extends Component {
                 <h1>All Recipes</h1>
                 {this.state.recipes.map(recipe => {
                     return (
-                        <div key={recipe.id} className="flex-container card-flex">
-                            {/* <Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link> */}
-                            <div className="card bg-dark text-white" style={{ maxWidth: '600px' }}>
-                                <img className="card-img" src={recipe.image_url} alt={recipe.name} />
-                                <div class="card-body">
-                                    <h5 className="card-title">{recipe.name}</h5>
-                                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                                    <p className="card-text"><Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link></p>
-                                </div>
-                                <div className="card-img-overlay">
-                                    <h5 className="card-title">{recipe.name}</h5>
-                                    <p className="card-text"><Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link></p>
-                                    <p className="card-text">{recipe.calories}</p>
-                                    <p className="card-text">{recipe.prep_time}</p>
-                                    {/* <p className="card-text">{recipe.directions}</p> */}
+                        <div className="flex-container card-flex" style={{ marginTop: "1rem", marginLeft: "2rem;" }}>
+                            <div key={recipe.id} className="flex-container card-flex">
+                                <div className="card" style={{ width: "600px" }}>
+                                    <img src={recipe.image_url} className="card-img-top" alt={recipe.name} />
+                                    <div className="card-body">
+                                        <h5 className="card-title"><Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link></h5>
+                                        {/* <p className="card-text"><Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link></p> */}
+                                        <p className="card-text">Cook Time: {recipe.prep_time}</p>
+                                        <p className="card-text">Calories: {recipe.calories}</p>
+                                        <a href="#" className="btn btn-primary">Go somewhere</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -105,6 +100,12 @@ export default class Recipes extends Component {
                     handleRecipeChange={this.handleRecipeChange}
                     submitBtnText="Create"
                 />
+                <div className="jumbotron jumbotron-fluid">
+                    <div className="container">
+                        <h1 className="display-4">Fluid jumbotron</h1>
+                        <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                    </div>
+                </div>
             </div>
         )
     }
