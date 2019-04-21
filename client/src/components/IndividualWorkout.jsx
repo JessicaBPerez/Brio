@@ -130,6 +130,12 @@ export default class IndividualWorkout extends Component {
         return (
             <div>
                 <NavbarPage />
+                <div className="jumbotron jumbotron-fluid">
+                    <div className="container">
+                        <h1 className="display-4">Fluid jumbotron</h1>
+                        <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                    </div>
+                </div>
                 <h1>IndividualWorkout</h1>
                 <button onClick={this.deleteWorkout}>
                     Delete
