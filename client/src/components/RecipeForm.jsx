@@ -4,8 +4,8 @@ export default function RecipeForm(props) {
 
     return (
         <div>
-            <h1>Recipe Form</h1>
-            <form onSubmit={props.handleSubmit}>
+            <h1 className="text-white">Recipe Form</h1>
+            {/* <form onSubmit={props.handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label>
                     <input
@@ -57,15 +57,12 @@ export default function RecipeForm(props) {
                     />
                 </div>
                 <button>{props.submitBtnText}</button>
-            </form>
-
-
-
+            </form> */}
 
             <form onSubmit={props.handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="name">Name:</label>
-                    <input
+                <div class="form-group">
+                    <label htmlFor="name" className="text-white">Name:</label>
+                    <input className="form-control"
                         type="text"
                         id="name"
                         name="name"
@@ -73,9 +70,9 @@ export default function RecipeForm(props) {
                         onChange={props.handleRecipeChange}
                     />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="image_url">Image URL:</label>
-                    <input
+                <div class="form-group">
+                    <label htmlFor="image_url" className="text-white">Image URL:</label>
+                    <input className="form-control"
                         type="text"
                         id="image_url"
                         name="image_url"
@@ -83,9 +80,9 @@ export default function RecipeForm(props) {
                         onChange={props.handleRecipeChange}
                     />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="calories">Calories:</label>
-                    <input
+                <div class="form-group">
+                    <label htmlFor="calories" className="text-white">Calories:</label>
+                    <input className="form-control"
                         type="text"
                         id="calories"
                         name="calories"
@@ -93,9 +90,9 @@ export default function RecipeForm(props) {
                         onChange={props.handleRecipeChange}
                     />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="prep_time">Prep Time:</label>
-                    <input
+                <div class="form-group">
+                    <label htmlFor="prep_time" className="text-white">Prep Time:</label>
+                    <input className="form-control"
                         type="text"
                         id="prep_time"
                         name="prep_time"
@@ -103,10 +100,9 @@ export default function RecipeForm(props) {
                         onChange={props.handleRecipeChange}
                     />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="directions">Directions:</label>
-                    <textarea
-                        className="form-control"
+                <div class="form-group">
+                    <label htmlFor="directions" className="text-white">Directions:</label>
+                    <textarea className="form-control"
                         type="text"
                         id="directions"
                         name="directions"
@@ -115,13 +111,7 @@ export default function RecipeForm(props) {
                     />
                 </div>
                 <div className="form-group">
-                    <button
-                        className="btn btn-dark btn-block"
-                        type="submit"
-                        value="submit"
-                    >
-                        Add New Fact
-                    </button>
+                    <button className="btn btn-primary btn-block">Add New Recipe</button>
                 </div>
             </form>
         </div>

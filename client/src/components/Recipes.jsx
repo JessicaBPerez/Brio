@@ -94,16 +94,20 @@ export default class Recipes extends Component {
                     )
                 })}
                 <h1>Create Recipe</h1>
-                <RecipeForm
+                {/* <RecipeForm
                     recipe={this.state.newRecipe}
                     handleSubmit={this.createRecipe}
                     handleRecipeChange={this.handleRecipeChange}
                     submitBtnText="Create"
-                />
-                <div className="jumbotron jumbotron-fluid">
+                /> */}
+                <div className="jumbotron jumbotron-fluid recipe-jumbotron">
                     <div className="container">
-                        <h1 className="display-4">Fluid jumbotron</h1>
-                        <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                        <RecipeForm
+                            recipe={this.state.newRecipe}
+                            handleSubmit={this.createRecipe}
+                            handleRecipeChange={this.handleRecipeChange}
+                            submitBtnText="Create"
+                        />
                     </div>
                 </div>
             </div>
