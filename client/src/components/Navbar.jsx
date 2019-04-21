@@ -25,7 +25,7 @@ class Navbar extends Component {
                 </nav> */}
                 <nav
                     className="navbar navbar-dark navbar-expand-lg fixed-top"
-                    id="mainNav"
+                    id=""
                 >
                     <div className="container">
                         <a className="navbar-brand brand-properties" href="/">
