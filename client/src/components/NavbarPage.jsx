@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 class NavbarPage extends Component {
     render() {
         return (
-            <div className="margin-bottom">
+            <div className="">
                 <nav className="navbar navbar-dark navbar-expand-lg fixed-top navbarstyle" id="mainNav">
                     <div className="container">
                         <a className="navbar-brand brand-properties" href="/">Brio</a>
