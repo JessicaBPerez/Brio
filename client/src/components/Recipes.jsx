@@ -84,10 +84,9 @@ export default class Recipes extends Component {
                                     <img src={recipe.image_url} className="card-img-top" alt={recipe.name} />
                                     <div className="card-body">
                                         <h5 className="card-title"><Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link></h5>
-                                        {/* <p className="card-text"><Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link></p> */}
                                         <p className="card-text">Cook Time: {recipe.prep_time}</p>
                                         <p className="card-text">Calories: {recipe.calories}</p>
-                                        <a href="#" className="btn btn-primary">Go somewhere</a>
+                                        <Link to={`/recipes/${recipe.id}/`} className="btn btn-primary">Get Recipe</Link>
                                     </div>
                                 </div>
                             </div>
@@ -95,12 +94,6 @@ export default class Recipes extends Component {
                     )
                 })}
                 <h1>Create Recipe</h1>
-                {/* <RecipeForm
-                    recipe={this.state.newRecipe}
-                    handleSubmit={this.createRecipe}
-                    handleRecipeChange={this.handleRecipeChange}
-                    submitBtnText="Create"
-                /> */}
                 <div className="jumbotron jumbotron-fluid recipe-jumbotron">
                     <div className="container">
                         <RecipeForm

@@ -130,10 +130,44 @@ export default class IndividualWorkout extends Component {
         return (
             <div>
                 <NavbarPage />
+                <div className="bg-dark text-white workout-margin workout-jumbo">
+                    <img className="card-img" src={this.state.workout.image_url} alt={this.state.workout.name} />
+                    <div className="card-img-overlay">
+                        <h5 className="card-title centered workout-text">{this.state.workout.name}</h5>
+                    </div>
+                </div>
+
+
+
                 <h1 className="workouts-margin">IndividualWorkout</h1>
                 <button onClick={this.deleteWorkout}>
                     Delete
                 </button>
+
+
+
+
+                <hr className="individual-underline container"></hr>
+
+
+
+                <div className="row align-items-center d-flex justify-content-center individual-recipe-margin">
+                    <div className="col-md-5"><img className="img-thumbnail" src={this.state.workout.image_url} alt="" /></div>
+                    <div className="col-md-5" style={{ width: "400px;" }}>
+                        <h3>{this.state.workout.name}</h3>
+                        <div className="getting-started-info">
+                            <p className="card-text">Target: {this.state.workout.target}</p>
+                            <p>Workout Time: {this.state.workout.workout_time}</p>
+                        </div>
+                        <button className="btn btn-outline-danger btn-lg" onClick={this.deleteWorkout}>Delete Workout</button>
+                    </div>
+                </div>
+                <hr className="individual-underline container"></hr>
+
+
+
+
+
                 <div className="card bg-dark text-white" style={{ maxWidth: '700px' }}>
                     <img className="card-img" src={this.state.workout.image_url} alt={this.state.workout.name} />
                     <div className="card-img-overlay">
@@ -160,14 +194,37 @@ export default class IndividualWorkout extends Component {
                         this.state.exercises.map(exercise => {
                             return (
                                 <div key={exercise.id}>
-                                    <h4>{exercise.name}</h4>
+                                    <div className="row align-items-center d-flex justify-content-center individual-recipe-margin">
+                                        <div className="col-md-5">
+                                            <iframe width="560" height="315" src={exercise.video_url}></iframe>
+                                        </div>
+                                        <div className="col-md-5" style={{ width: "400px;" }}>
+                                            <h3>{exercise.name}</h3>
+                                            <Link to={`/exercise/${exercise.id}/`}>{exercise.name}</Link>
+                                            <div className="getting-started-info">
+                                                <p className="card-text">Target: {exercise.exercise_target}</p>
+                                                <p>Exercise Time: {exercise.time}</p>
+                                                <p>Exercise Description: {exercise.description}</p>
+                                                <p>Exercise Benefits: {exercise.benefits}</p>
+                                            </div>
+                                            <button className="btn btn-outline-danger btn-lg" onClick={this.deleteWorkout}>Delete Workout</button>
+                                        </div>
+                                    </div>
+                                    <hr className="individual-underline container"></hr>
+
+
+
+
+
+                                    {/* <h4>{exercise.name}</h4>
+                                    <iframe width="560" height="315" src={exercise.video_url}></iframe>
                                     <div>{exercise.video_url}</div>
                                     <div>{exercise.target}</div>
                                     <div>{exercise.time}</div>
-                                    <Link to={`/exercise/${exercise.id}/`}>{exercise.name}</Link>
+                                    <Link to={`/exercise/${exercise.id}/`}>{exercise.name}</Link> */}
                                     {/* <div>{exercise.image_url}</div> */}
-                                    <div>{exercise.description}</div>
-                                    <div>{exercise.benefits}</div>
+                                    {/* <div>{exercise.description}</div>
+                                    <div>{exercise.benefits}</div> */}
                                 </div>
                             )
                         })
