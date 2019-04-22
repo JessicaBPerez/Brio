@@ -481,6 +481,9 @@ textarea {
 
 .workout-link:hover {
     color: rgb(183, 180, 180);
-    transform: scale(1.1);
     text-decoration: #00adad;
+    font-size: 1.9rem;
 }
+
+
+/* Flex Wrap for cards */

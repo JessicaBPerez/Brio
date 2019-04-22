@@ -78,11 +78,11 @@ export default class Workout extends Component {
                 <h1>All Workouts</h1>
                 {this.state.workouts.map(workout => {
                     return (
-                        <div key={workout.id}>
-                            <div className="card bg-dark text-white" style={{ maxWidth: '700px' }}>
+                        <div key={workout.id} className="flex-container card-flex">
+                            <div className="card bg-dark text-white" style={{ maxWidth: '650px' }}>
                                 <img className="card-img" src={workout.image_url} alt={workout.name} />
                                 <div className="card-img-overlay">
-                                    <h3 className="card-title centered"><Link to={`/workouts/${workout.id}/`} className="workout-link">{workout.name}</Link></h3>
+                                    <h3 className="card-title centered scale"><Link to={`/workouts/${workout.id}/`} className="workout-link">{workout.name}</Link></h3>
                                     {/* <p className="card-text">{workout.target}</p>
                                     <p className="card-text">{workout.workout_time}</p> */}
                                 </div>
