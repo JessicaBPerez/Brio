@@ -17,7 +17,7 @@ class Exercise(models.Model):
     video_url = models.CharField(default='', max_length=600)
     description = models.TextField(default='', max_length=2000)
     benefits = models.TextField(default='', max_length=2000)
-    workout = models.ForeignKey(Workout, on_delete='CASCADE', related_name='exercises')
+    workout = models.ForeignKey(Workout, on_delete=models.CASCADE, related_name='exercises')
 
     def __str__(self):
         return self.name

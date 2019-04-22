@@ -449,3 +449,18 @@ textarea {
 .individual-recipe-margin {
     margin-top: 10rem;
 }
+
+
+/* Recipe Form Marin */
+
+.recipe-form-margin {
+    margin-bottom: 2rem;
+}
+
+.ingredient-card {
+    background: rgb(62, 70, 79)!important;
+}
+
+.workouts-margin {
+    margin-top: 14rem;
+}

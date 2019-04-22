@@ -9,7 +9,7 @@ class Home extends Component {
         return (
             <div>
                 <Navbar />
-                <div class="video-wrapper">
+                <div className="video-wrapper">
                     <video loop autoPlay>
                         <source src={Workoutz} type="video/mp4" />
                         <source src={Workoutz} type="video/mov" />

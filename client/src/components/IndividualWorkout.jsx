@@ -130,7 +130,7 @@ export default class IndividualWorkout extends Component {
         return (
             <div>
                 <NavbarPage />
-                <h1>IndividualWorkout</h1>
+                <h1 className="workouts-margin">IndividualWorkout</h1>
                 <button onClick={this.deleteWorkout}>
                     Delete
                 </button>

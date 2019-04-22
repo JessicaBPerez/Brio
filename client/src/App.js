@@ -8,6 +8,7 @@ import IndividualWorkout from './components/IndividualWorkout';
 import Recipes from './components/Recipes.jsx'
 import IndividualExercise from './components/IndividualExercise.jsx'
 import IndividualRecipe from './components/IndividualRecipe';
+import Gyms from './components/Gyms';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
               <Route exact path='/exercise/:id' component={IndividualExercise} />
               <Route exact path='/recipes' component={Recipes} />
               <Route path='/recipes/:id' component={IndividualRecipe} />
+              <Route exact path='/gyms' component={Gyms} />
             </Switch>
 
           </div>

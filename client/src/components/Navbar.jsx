@@ -31,7 +31,7 @@ class Navbar extends Component {
                                     <Link to={`/recipes`} className="nav-link js-scroll-trigger">Recipes</Link>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <Link to={`/`} className="nav-link js-scroll-trigger">Rando</Link>
+                                    <Link to={`/gyms`} className="nav-link js-scroll-trigger">Gyms</Link>
                                 </li>
                             </ul>
                         </div>

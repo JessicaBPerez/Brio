@@ -166,6 +166,34 @@ export default class IndividualRecipe extends Component {
                                 </div>
                             </p>
                         </div>
+
+
+
+
+
+                        {/* <div className="card text-white ingredient-card mb-3" style={{ maxWidth: "18rem;" }}>
+                            <div className="card-header"><h3>Ingredients</h3></div>
+                            <div className="card-body">
+                                <p className="card-text">
+                                    <div className="card">
+                                        {this.state.ingredients.map(ingredient => {
+                                            return (
+                                                <div key={ingredient.id} className="d-flex justify-content-center">
+                                                    <button onClick={() => this.deleteIngredient(ingredient.id)} type="button" className="ingredient-decor" aria-label="Close"><p>{ingredient.name}</p>
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </p>
+                            </div>
+                        </div> */}
+
+
+
+
+
                     </div>
                 </div>
                 <hr className="individual-underline container"></hr>
@@ -177,9 +205,9 @@ export default class IndividualRecipe extends Component {
                     submitBtnText="Create"
                     ingredientId={this.props.match.params.id}
                 />
-
                 <hr className="individual-underline container"></hr>
-                <button onClick={this.toggleEditForm}>
+                <h1>Edit Recipe</h1>
+                <button className="recipe-form-margin" onClick={this.toggleEditForm}>
                     {this.state.isEditFormDisplayed === true ? 'Hide Edit Form' : 'Edit Recipe'}
                 </button>
                 {

@@ -32,6 +32,7 @@ export default class Recipes extends Component {
             console.log(`You made an error, Jess!`, err)
         }
     }
+
     // Recipe Handle Change
     handleRecipeChange = (event) => {
         const clonedNewRecipe = { ...this.state.newRecipe }
