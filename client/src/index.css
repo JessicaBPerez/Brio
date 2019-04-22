@@ -473,3 +473,14 @@ textarea {
     margin-top: 3rem;
     margin-right: 2rem;
 }
+
+.workout-link {
+    color: white;
+    text-decoration: none;
+}
+
+.workout-link:hover {
+    color: rgb(183, 180, 180);
+    transform: scale(1.1);
+    text-decoration: #00adad;
+}

@@ -79,18 +79,20 @@ export default class Workout extends Component {
                 {this.state.workouts.map(workout => {
                     return (
                         <div key={workout.id}>
-                            {/* <h3>{workout.name}</h3>
-                            <img src={workout.image_url} alt={workout.name} /> */}
-                            <Link to={`/workouts/${workout.id}/`}>{workout.name}</Link>
                             <div className="card bg-dark text-white" style={{ maxWidth: '700px' }}>
                                 <img className="card-img" src={workout.image_url} alt={workout.name} />
                                 <div className="card-img-overlay">
-                                    <h5 className="card-title">{workout.name}</h5>
-                                    <p className="card-text"><Link to={`/workouts/${workout.id}/`}>{workout.name}</Link></p>
-                                    <p className="card-text">{workout.target}</p>
-                                    <p className="card-text">{workout.workout_time}</p>
+                                    <h3 className="card-title centered"><Link to={`/workouts/${workout.id}/`} className="workout-link">{workout.name}</Link></h3>
+                                    {/* <p className="card-text">{workout.target}</p>
+                                    <p className="card-text">{workout.workout_time}</p> */}
                                 </div>
                             </div>
+                            {/* <div class="card-body">
+                                <h5 class="card-title"><Link to={`/workouts/${workout.id}/`}>{workout.name}</Link></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div> */}
+
                         </div>
                     )
                 })}
