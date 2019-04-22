@@ -1,23 +1,8 @@
 import React, { Component } from 'react'
 
 export default function IngredientForm(props) {
-
     return (
         <div>
-            {/* <form onSubmit={props.handleIngredientSubmit}>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={props.newIngredient.name}
-                        onChange={props.handleIngredientChange}
-                    />
-                </div>
-                <button>{props.submitBtnText}</button>
-            </form> */}
-
             <form onSubmit={props.handleIngredientSubmit} className="container">
                 <div class="form-group">
                     <label htmlFor="name">Name:</label>
@@ -34,5 +19,4 @@ export default function IngredientForm(props) {
             </form>
         </div>
     )
-
 }
