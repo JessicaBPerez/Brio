@@ -6,7 +6,7 @@ export default function RecipeForm(props) {
         <div>
             <h1 className="text-white"></h1>
             <form onSubmit={props.handleSubmit}>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="name" className="text-white">Name:</label>
                     <input className="form-control"
                         type="text"
@@ -16,7 +16,7 @@ export default function RecipeForm(props) {
                         onChange={props.handleRecipeChange}
                     />
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="image_url" className="text-white">Image URL:</label>
                     <input className="form-control"
                         type="text"
@@ -26,7 +26,7 @@ export default function RecipeForm(props) {
                         onChange={props.handleRecipeChange}
                     />
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="calories" className="text-white">Calories:</label>
                     <input className="form-control"
                         type="text"
@@ -36,7 +36,7 @@ export default function RecipeForm(props) {
                         onChange={props.handleRecipeChange}
                     />
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="prep_time" className="text-white">Prep Time:</label>
                     <input className="form-control"
                         type="text"
@@ -46,7 +46,7 @@ export default function RecipeForm(props) {
                         onChange={props.handleRecipeChange}
                     />
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="directions" className="text-white">Directions:</label>
                     <textarea className="form-control"
                         type="text"

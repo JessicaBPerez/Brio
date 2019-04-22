@@ -95,12 +95,22 @@ export default class Workout extends Component {
                     )
                 })}
                 <h1>Create Workout</h1>
-                <WorkoutForm
+                <div className="jumbotron jumbotron-fluid recipe-jumbotron">
+                    <div className="container">
+                        <WorkoutForm
+                            workout={this.state.newWorkout}
+                            handleChange={this.handleChange}
+                            handleSubmit={this.createWorkout}
+                            submitBtnText="Create"
+                        />
+                    </div>
+                </div>
+                {/* <WorkoutForm
                     workout={this.state.newWorkout}
                     handleChange={this.handleChange}
                     handleSubmit={this.createWorkout}
                     submitBtnText="Create"
-                />
+                /> */}
             </div>
         )
     }

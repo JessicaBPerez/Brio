@@ -3,11 +3,10 @@ import React, { Component } from 'react'
 export default function ExerciseForm(props) {
     return (
         <div>
-            <h1>Exercise Form</h1>
             <form onSubmit={props.handleExerciseSubmit}>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input
+                <div className="form-group">
+                    <label htmlFor="name" className="text-white">Name:</label>
+                    <input className="form-control"
                         type="text"
                         id="name"
                         name="name"
@@ -15,9 +14,9 @@ export default function ExerciseForm(props) {
                         onChange={props.handleExerciseChange}
                     />
                 </div>
-                <div>
-                    <label htmlFor="exercise_target">Exercise Target:</label>
-                    <input
+                <div className="form-group">
+                    <label htmlFor="exercise_target" className="text-white">Exercise Target:</label>
+                    <input className="form-control"
                         type="text"
                         id="exercise_target"
                         name="exercise_target"
@@ -25,9 +24,9 @@ export default function ExerciseForm(props) {
                         onChange={props.handleExerciseChange}
                     />
                 </div>
-                <div>
-                    <label htmlFor="time">Time: </label>
-                    <input
+                <div className="form-group">
+                    <label htmlFor="time" className="text-white">Time: </label>
+                    <input className="form-control"
                         type="text"
                         id="time"
                         name="time"
@@ -35,9 +34,9 @@ export default function ExerciseForm(props) {
                         onChange={props.handleExerciseChange}
                     />
                 </div>
-                <div>
-                    <label htmlFor="video_url">Video URL:</label>
-                    <input
+                <div className="form-group">
+                    <label htmlFor="video_url" className="text-white">Video URL:</label>
+                    <input className="form-control"
                         type="text"
                         id="video_url"
                         name="video_url"
@@ -45,9 +44,9 @@ export default function ExerciseForm(props) {
                         onChange={props.handleExerciseChange}
                     />
                 </div>
-                <div>
-                    <label htmlFor="description">description:</label>
-                    <input
+                <div className="form-group">
+                    <label htmlFor="description" className="text-white">description:</label>
+                    <input className="form-control"
                         type="text"
                         id="description"
                         name="description"
@@ -55,9 +54,9 @@ export default function ExerciseForm(props) {
                         onChange={props.handleExerciseChange}
                     />
                 </div>
-                <div>
-                    <label htmlFor="benefits">Benefits:</label>
-                    <input
+                <div className="form-group">
+                    <label htmlFor="benefits" className="text-white">Benefits:</label>
+                    <input className="form-control"
                         type="text"
                         id="benefits"
                         name="benefits"
@@ -65,7 +64,7 @@ export default function ExerciseForm(props) {
                         onChange={props.handleExerciseChange}
                     />
                 </div>
-                <button>{props.submitBtnText}</button>
+                <button className="btn btn-primary btn-block">{props.submitBtnText}</button>
             </form>
         </div>
     )

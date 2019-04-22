@@ -468,3 +468,8 @@ textarea {
 .workouts-margin {
     margin-top: 14rem;
 }
+
+.workout-delete-margin {
+    margin-top: 3rem;
+    margin-right: 2rem;
+}

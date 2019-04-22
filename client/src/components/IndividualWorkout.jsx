@@ -136,17 +136,24 @@ export default class IndividualWorkout extends Component {
                         <h5 className="card-title centered workout-text">{this.state.workout.name}</h5>
                     </div>
                 </div>
-
-
-
-                <h1 className="workouts-margin">IndividualWorkout</h1>
-                <button onClick={this.deleteWorkout}>
-                    Delete
+                <button className="btn btn-outline-danger btn-lg workout-delete-margin" onClick={this.deleteWorkout}>
+                    Delete Workout
                 </button>
 
-
-
-
+                {/* Edit Workout and Toggle */}
+                <button className="btn btn-outline-warning btn-lg workout-delete-margin" onClick={this.toggleEditForm}>
+                    {this.state.isEditFormDisplayed === true ? 'Hide Edit Form' : 'Edit Workout'}
+                </button>
+                {
+                    this.state.isEditFormDisplayed
+                        ? <WorkoutForm
+                            workout={this.state.workout}
+                            handleChange={this.handleChange}
+                            handleSubmit={this.updateWorkout}
+                            submitBtnText="Update"
+                        />
+                        : null
+                }
                 <hr className="individual-underline container"></hr>
 
 
@@ -167,28 +174,6 @@ export default class IndividualWorkout extends Component {
 
 
 
-
-                <div className="card bg-dark text-white" style={{ maxWidth: '700px' }}>
-                    <img className="card-img" src={this.state.workout.image_url} alt={this.state.workout.name} />
-                    <div className="card-img-overlay">
-                        <h5 className="card-title">{this.state.workout.name}</h5>
-                        <p className="card-text">{this.state.workout.target}</p>
-                        <p className="card-text">{this.state.workout.workout_time}</p>
-                    </div>
-                </div>
-                <button onClick={this.toggleEditForm}>
-                    {this.state.isEditFormDisplayed === true ? 'Hide Edit Form' : 'Edit'}
-                </button>
-                {
-                    this.state.isEditFormDisplayed
-                        ? <WorkoutForm
-                            workout={this.state.workout}
-                            handleChange={this.handleChange}
-                            handleSubmit={this.updateWorkout}
-                            submitBtnText="Update"
-                        />
-                        : null
-                }
                 <div>
                     {
                         this.state.exercises.map(exercise => {
@@ -231,13 +216,24 @@ export default class IndividualWorkout extends Component {
                     }
                 </div>
                 <h1>Create Exercise</h1>
-                <ExerciseForm
+                <div className="jumbotron jumbotron-fluid recipe-jumbotron">
+                    <div className="container">
+                        <ExerciseForm
+                            newExercise={this.state.newExercise}
+                            handleExerciseChange={this.handleExerciseChange}
+                            handleExerciseSubmit={this.createExercise}
+                            submitBtnText="Create"
+                            workoutId={this.props.match.params.id}
+                        />
+                    </div>
+                </div>
+                {/* <ExerciseForm
                     newExercise={this.state.newExercise}
                     handleExerciseChange={this.handleExerciseChange}
                     handleExerciseSubmit={this.createExercise}
                     submitBtnText="Create"
                     workoutId={this.props.match.params.id}
-                />
+                /> */}
             </div>
         )
     }

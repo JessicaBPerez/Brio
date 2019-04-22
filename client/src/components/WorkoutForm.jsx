@@ -4,11 +4,10 @@ export default function WorkoutForm(props) {
 
     return (
         <div>
-            <h1>Workout Form</h1>
             <form onSubmit={props.handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input
+                <div className="form-group">
+                    <label htmlFor="name" className="text-white">Name:</label>
+                    <input className="form-control"
                         type="text"
                         id="name"
                         name="name"
@@ -16,9 +15,9 @@ export default function WorkoutForm(props) {
                         onChange={props.handleChange}
                     />
                 </div>
-                <div>
-                    <label htmlFor="target">Target:</label>
-                    <input
+                <div className="form-group">
+                    <label htmlFor="target" className="text-white">Target:</label>
+                    <input className="form-control"
                         type="text"
                         id="target"
                         name="target"
@@ -26,9 +25,9 @@ export default function WorkoutForm(props) {
                         onChange={props.handleChange}
                     />
                 </div>
-                <div>
-                    <label htmlFor="image_url">Image URL:</label>
-                    <input
+                <div className="form-group">
+                    <label htmlFor="image_url" className="text-white">Image URL:</label>
+                    <input className="form-control"
                         type="text"
                         id="image_url"
                         name="image_url"
@@ -36,9 +35,9 @@ export default function WorkoutForm(props) {
                         onChange={props.handleChange}
                     />
                 </div>
-                <div>
-                    <label htmlFor="workout_time">Workout Time:</label>
-                    <input
+                <div className="form-group">
+                    <label htmlFor="workout_time" className="text-white">Workout Time:</label>
+                    <input className="form-control"
                         type="text"
                         id="workout_time"
                         name="workout_time"
@@ -46,7 +45,7 @@ export default function WorkoutForm(props) {
                         onChange={props.handleChange}
                     />
                 </div>
-                <button>{props.submitBtnText}</button>
+                <button className="btn btn-primary btn-block">{props.submitBtnText}</button>
             </form>
         </div>
     )
