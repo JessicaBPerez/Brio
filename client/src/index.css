@@ -430,5 +430,18 @@ textarea {
 /* Recipe Form Jumbotron */
 
 .recipe-jumbotron {
-    background-color: rgb(72, 73, 77)!important;
+    background-color: rgb(62, 70, 79)!important;
+}
+
+.individual-underline {
+    border-bottom: 1px solid rgb(99, 92, 92);
+    margin-top: 3rem;
+}
+
+
+/* Ingredient Decoration */
+
+.ingredient-decor {
+    text-decoration: none;
+    border: none;
 }

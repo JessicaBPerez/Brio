@@ -138,10 +138,74 @@ export default class IndividualRecipe extends Component {
             <div>
                 <NavbarPage />
                 <h1 className="workout-margin">Individual Recipe</h1>
-                <button onClick={this.deleteRecipe}>
-                    Delete Recipe
-                </button>
-                <div className="card bg-dark text-white" style={{ maxWidth: '700px' }}>
+                <button onClick={this.deleteRecipe}>Delete Recipe</button>
+
+
+                {/* <section class="flex-container card-flex button-margin">
+                    <div class="card bg-secondary" style={{ width: "23rem;" }}>
+                        <div class="card-header text-white card-align"><h5 class="card-text">Delete School</h5></div>
+                        <div class="card-body">
+                            <p class="card-text text-white">Not interested in this school's ratings? No problem, just delete below.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="card bg-secondary" style={{ width: "23rem;" }}>
+                        <div class="card-header text-white card-align"><h5 class="card-text">Add Schools</h5></div>
+                        <div class="card-body">
+                            <p class="card-text text-white">Want to add your own professor rankings? Get started by adding a new school.</p>
+                            <button class="btn btn-info"><a class="text-white text-decoration-none" href="">Add Schools</a></button>
+                        </div>
+                    </div>
+                </section> */}
+
+                <div className="row align-items-center d-flex justify-content-center">
+                    <div className="col-md-5"><img className="img-thumbnail" src={this.state.recipe.image_url} /></div>
+                    <div className="col-md-5" style={{ width: "400px;" }}>
+                        <h3>{this.state.recipe.name}</h3>
+                        <div className="getting-started-info">
+                            <p className="card-text">Cook Time: {this.state.recipe.prep_time}</p>
+                            <p>Cook Time: {this.state.recipe.calories}</p>
+                        </div>
+                        <button className="btn btn-outline-danger btn-lg" onClick={this.deleteRecipe}>Delete Recipe</button>
+                    </div>
+                </div>
+                <hr className="individual-underline container"></hr>
+
+
+
+                <div className="row align-items-center d-flex justify-content-center">
+                    <div className="col-md-5">
+                        <h3>Directions</h3>
+                        <p className="card-text">{this.state.recipe.directions}</p>
+                    </div>
+                    <div className="col-md-5" style={{ width: "400px;" }}>
+                        <h3>Ingredients</h3>
+                        <div className="getting-started-info">
+                            <p className="card-text">
+                                <div className="card">
+                                    {this.state.ingredients.map(ingredient => {
+                                        return (
+                                            <div key={ingredient.id} className="d-flex justify-content-center">
+                                                {/* () => {this.deleteIngredient(ingredient.id)} */}
+                                                <button onClick={() => this.deleteIngredient(ingredient.id)} type="button" className="ingredient-decor" aria-label="Close"><p>{ingredient.name}</p>
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr className="individual-underline container"></hr>
+
+
+
+
+                {/* <div className="card bg-dark text-white" style={{ maxWidth: '700px' }}>
                     <img className="card-img" src={this.state.recipe.image_url} alt={this.state.recipe.name} />
                     <div className="card-img-overlay">
                         <h5 className="card-title">{this.state.recipe.name}</h5>
@@ -149,7 +213,7 @@ export default class IndividualRecipe extends Component {
                         <p className="card-text">{this.state.recipe.prep_time}</p>
                         <p className="card-text">{this.state.recipe.directions}</p>
                     </div>
-                </div>
+                </div> */}
                 <button onClick={this.toggleEditForm}>
                     {this.state.isEditFormDisplayed === true ? 'Hide Edit Form' : 'Edit'}
                 </button>

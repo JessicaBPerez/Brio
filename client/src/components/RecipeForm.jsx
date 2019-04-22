@@ -4,7 +4,7 @@ export default function RecipeForm(props) {
 
     return (
         <div>
-            <h1 className="text-white">Recipe Form</h1>
+            <h1 className="text-white">Create New Recipe</h1>
             {/* <form onSubmit={props.handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label>
