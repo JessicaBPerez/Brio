@@ -445,3 +445,7 @@ textarea {
     text-decoration: none;
     border: none;
 }
+
+.individual-recipe-margin {
+    margin-top: 10rem;
+}

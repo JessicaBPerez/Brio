@@ -10,7 +10,7 @@ export default class IndividualRecipe extends Component {
         recipe: {},
         ingredients: [],
         newIngredient: {
-            name: 'holder value',
+            name: 'Enter Information',
             recipe: this.props.match.params.id
         },
         redirectToRecipes: false,
@@ -137,8 +137,8 @@ export default class IndividualRecipe extends Component {
         return (
             <div>
                 <NavbarPage />
-                <h1 className="workout-margin">Individual Recipe</h1>
-                <button onClick={this.deleteRecipe}>Delete Recipe</button>
+                {/* <h1 className="workout-margin">Individual Recipe</h1>
+                <button onClick={this.deleteRecipe}>Delete Recipe</button> */}
 
 
                 {/* <section class="flex-container card-flex button-margin">
@@ -159,7 +159,7 @@ export default class IndividualRecipe extends Component {
                     </div>
                 </section> */}
 
-                <div className="row align-items-center d-flex justify-content-center">
+                <div className="row align-items-center d-flex justify-content-center individual-recipe-margin">
                     <div className="col-md-5"><img className="img-thumbnail" src={this.state.recipe.image_url} /></div>
                     <div className="col-md-5" style={{ width: "400px;" }}>
                         <h3>{this.state.recipe.name}</h3>
@@ -203,7 +203,14 @@ export default class IndividualRecipe extends Component {
                 <hr className="individual-underline container"></hr>
 
 
-
+                <h1>Add Ingredient</h1>
+                <IngredientForm
+                    newIngredient={this.state.newIngredient}
+                    handleIngredientChange={this.handleIngredientChange}
+                    handleIngredientSubmit={this.createIngredient}
+                    submitBtnText="Create"
+                    ingredientId={this.props.match.params.id}
+                />
 
                 {/* <div className="card bg-dark text-white" style={{ maxWidth: '700px' }}>
                     <img className="card-img" src={this.state.recipe.image_url} alt={this.state.recipe.name} />
@@ -227,27 +234,27 @@ export default class IndividualRecipe extends Component {
                         />
                         : null
                 }
-                <div>
+                {/* <div>
                     {this.state.ingredients.map(ingredient => {
                         return (
                             <div key={ingredient.id}>
                                 {/* () => {this.deleteIngredient(ingredient.id)} */}
-                                <button onClick={() => this.deleteIngredient(ingredient.id)} type="button" className="close" aria-label="Close"><h2>{ingredient.name}</h2>
+                {/* <button onClick={() => this.deleteIngredient(ingredient.id)} type="button" className="close" aria-label="Close"><h2>{ingredient.name}</h2>
                                     <span aria-hidden="true">&times;</span>
                                 </button>
 
                             </div>
                         )
                     })}
-                </div>
-                <h1>Add Ingredient</h1>
+                </div>  */}
+                {/* <h1>Add Ingredient</h1>
                 <IngredientForm
                     newIngredient={this.state.newIngredient}
                     handleIngredientChange={this.handleIngredientChange}
                     handleIngredientSubmit={this.createIngredient}
                     submitBtnText="Create"
                     ingredientId={this.props.match.params.id}
-                />
+                /> */}
             </div>
         )
     }
