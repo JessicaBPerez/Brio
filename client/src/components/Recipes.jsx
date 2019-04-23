@@ -75,11 +75,11 @@ export default class Recipes extends Component {
                         <h5 className="card-title centered workout-text">RECIPES</h5>
                     </div>
                 </div>
-                <h1>All Recipes</h1>
+                <hr className="individual-underline container"></hr>
                 {this.state.recipes.map(recipe => {
                     return (
                         <div className="flex-container card-flex" style={{ marginTop: "1rem", marginLeft: "2rem;" }}>
-                            <div key={recipe.id} className="flex-container card-flex">
+                            <div key={recipe.id} className="flex-container card-flex card-margin-all">
                                 <div className="card" style={{ width: "600px" }}>
                                     <img src={recipe.image_url} className="card-img-top" alt={recipe.name} />
                                     <div className="card-body">

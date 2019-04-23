@@ -175,9 +175,7 @@ export default class Gyms extends Component {
                         </div>
                     </div>
                 </div>
-
-
-
+                {/* Napster Info */}
                 <div className="card-flex audio-card-margin">
                     <div className="card bg-dark d-flex justify-content-center audio-card-margin" style={{ maxWidth: "400px", height: "130px" }}>
                         <div className="text-white">{this.state.ninthName}</div>

@@ -200,15 +200,7 @@ export default class IndividualWorkout extends Component {
 
 
 
-                                    {/* <h4>{exercise.name}</h4>
-                                    <iframe width="560" height="315" src={exercise.video_url}></iframe>
-                                    <div>{exercise.video_url}</div>
-                                    <div>{exercise.target}</div>
-                                    <div>{exercise.time}</div>
-                                    <Link to={`/exercise/${exercise.id}/`}>{exercise.name}</Link> */}
-                                    {/* <div>{exercise.image_url}</div> */}
-                                    {/* <div>{exercise.description}</div>
-                                    <div>{exercise.benefits}</div> */}
+
                                 </div>
                             )
                         })
@@ -226,13 +218,6 @@ export default class IndividualWorkout extends Component {
                         />
                     </div>
                 </div>
-                {/* <ExerciseForm
-                    newExercise={this.state.newExercise}
-                    handleExerciseChange={this.handleExerciseChange}
-                    handleExerciseSubmit={this.createExercise}
-                    submitBtnText="Create"
-                    workoutId={this.props.match.params.id}
-                /> */}
             </div>
         )
     }

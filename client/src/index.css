@@ -27,7 +27,7 @@ body {
 }
 
 .navbarstyle {
-    background-color: #495057!important;
+    background-color: #737d87!important;
 }
 
 .brand-properties {
@@ -508,4 +508,8 @@ textarea {
 
 .nav-font {
     font-size: 1.2rem;
+}
+
+.card-margin-all {
+    margin-top: 3rem;
 }
