@@ -27,7 +27,6 @@ body {
 }
 
 .navbarstyle {
-    /* background-image: url('https://www.readersdigest.ca/wp-content/uploads/sites/14/2017/03/history-of-the-easter-bunny.jpg'); */
     background-color: #495057!important;
 }
 
@@ -41,8 +40,8 @@ body {
 
 .nav-link {
     color: rgb(255, 255, 255)!important;
-    font-family: "Josefin sans";
-    font-size: 1.1rem;
+    font-family: "fira sans";
+    font-size: 1.3rem;
 }
 
 .card-margin {
