@@ -64,7 +64,7 @@ export default class Gyms extends Component {
                         <h5 className="card-title centered workout-text">MUSIC</h5>
                     </div>
                 </div>
-                <h1 className="home-margin">Gyms</h1>
+                <hr className="individual-underline container audio-card-margin"></hr>
                 <div className="card-flex audio-card-margin">
                     <div className="card bg-dark d-flex justify-content-center audio-card-margin" style={{ maxWidth: "400px", height: "130px" }}>
                         <div className="text-white">{this.state.ninthName}</div>
