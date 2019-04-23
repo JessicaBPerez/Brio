@@ -111,6 +111,7 @@ export default class Gyms extends Component {
                         flexDirection: "column",
                         alignItems: "center"
                     }}
+                    className="audio-card-margin"
                 >
                     <div
                         className="w3-card-4 w3-margin margin weather justify-content-center"
