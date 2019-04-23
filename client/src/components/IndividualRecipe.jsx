@@ -207,7 +207,7 @@ export default class IndividualRecipe extends Component {
                 />
                 <hr className="individual-underline container"></hr>
                 <h1>Edit Recipe</h1>
-                <button className="recipe-form-margin" onClick={this.toggleEditForm}>
+                <button className="recipe-form-margin btn btn-primary" onClick={this.toggleEditForm}>
                     {this.state.isEditFormDisplayed === true ? 'Hide Edit Form' : 'Edit Recipe'}
                 </button>
                 {

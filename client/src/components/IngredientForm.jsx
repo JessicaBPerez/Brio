@@ -4,9 +4,9 @@ export default function IngredientForm(props) {
     return (
         <div>
             <form onSubmit={props.handleIngredientSubmit} className="container">
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="name">Name:</label>
-                    <input class="form-control"
+                    <input className="form-control"
                         type="text"
                         id="name"
                         name="name"
@@ -15,7 +15,7 @@ export default function IngredientForm(props) {
                         placeholder="Enter email"
                     />
                 </div>
-                <button type="submit" class="btn btn-primary">Add Ingredient</button>
+                <button type="submit" className="btn btn-primary">Add Ingredient</button>
             </form>
         </div>
     )

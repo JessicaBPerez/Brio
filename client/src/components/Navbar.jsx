@@ -7,7 +7,7 @@ class Navbar extends Component {
             <div className="margin-bottom">
                 <nav className="navbar navbar-dark navbar-expand-lg fixed-top">
                     <div className="container">
-                        <a className="navbar-brand brand-properties" href="/">Brio</a>
+                        <a className="navbar-brand brand-properties" href="/"></a>
                         <button
                             className="navbar-toggler navbar-toggler-right"
                             data-toggle="collapse"

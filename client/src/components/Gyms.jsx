@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import NavbarPage from './NavbarPage';
 const NAPSTER_API_KEY = process.env.REACT_APP_NAPSTER_API_KEY;
+const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY
 
 export default class Gyms extends Component {
     state = {
@@ -11,11 +12,12 @@ export default class Gyms extends Component {
 
     componentDidMount() {
         this.fetchGyms()
+        this.getWeatherData()
     }
 
     fetchGyms = () => {
         axios
-            .get(`http://api.napster.com/v2.2/tracks/top?apikey=${NAPSTER_API_KEY}&limit=10`)
+            .get(`https://api.napster.com/v2.2/tracks/top?apikey=${NAPSTER_API_KEY}&limit=10`)
             .then(response => {
                 this.setState({
                     songs: response.data,
@@ -54,6 +56,39 @@ export default class Gyms extends Component {
                 console.log("You messed up somewhere, Jess. Go back!", err);
             });
     };
+
+
+    getWeatherData = () => {
+        axios
+            .get(
+                `https://api.openweathermap.org/data/2.5/forecast?zip=30303,us&appid=${WEATHER_API_KEY}`
+            )
+            .then(response => {
+                this.setState({
+                    weatherCity: response.data.city,
+                    weatherList: response.data.list,
+                    weatherMain: response.data.list[0].main.humidity,
+                    weatherMain2: response.data.list[1].main,
+                    actualWeatherDay1Description:
+                        response.data.list[0].weather[0].description,
+                    actualWeatherDay1Icon: response.data.list[0].weather[0].icon,
+                    actualWeatherDay1Main: response.data.list[0].weather[0].main,
+                    actualWeatherDay2: response.data.list[1].weather[0],
+                    actualWeatherDay3: response.data.list[2].weather[0],
+                    actualweatherDay2Description:
+                        response.data.list[1].weather[0].description,
+                    actualWeatherDay2Icon: response.data.list[1].weather[0].icon,
+                    actualWeatherDay3Description:
+                        response.data.list[2].weather[0].description,
+                    actualWeatherDay3Icon: response.data.list[2].weather[0].icon
+                });
+            })
+            .catch(err => {
+                console.log("You didn't get the weather!", err);
+            });
+    };
+
+
     render() {
         return (
             <div>
@@ -65,6 +100,8 @@ export default class Gyms extends Component {
                     </div>
                 </div>
                 <hr className="individual-underline container audio-card-margin"></hr>
+
+
                 <div className="card-flex audio-card-margin">
                     <div className="card bg-dark d-flex justify-content-center audio-card-margin" style={{ maxWidth: "400px", height: "130px" }}>
                         <div className="text-white">{this.state.ninthName}</div>
