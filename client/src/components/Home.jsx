@@ -16,7 +16,7 @@ class Home extends Component {
                         Your browser does not support the video tag.
                     </video>
                     <div className="overlay-desc brio-headline">
-                        <h1 className="brio-text centered">Brio</h1>
+                        <h1 className="brio-text centered animated fadeInDown delay-2s">Brio</h1>
                         {/* <div className="estrellas centered">
                             <span>★</span>
                             <span>★</span>
