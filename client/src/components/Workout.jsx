@@ -74,7 +74,6 @@ export default class Workout extends Component {
                         <h5 className="card-title centered workout-text workout-all-margin">WORKOUTS</h5>
                     </div>
                 </div>
-                <h1>All Workouts</h1>
                 <hr className="individual-underline container audio-card-margin"></hr>
                 {this.state.workouts.map(workout => {
                     return (
@@ -83,16 +82,8 @@ export default class Workout extends Component {
                                 <img className="card-img" src={workout.image_url} alt={workout.name} />
                                 <div className="card-img-overlay">
                                     <h3 className="card-title centered scale"><Link to={`/workouts/${workout.id}/`} className="workout-link">{workout.name}</Link></h3>
-                                    {/* <p className="card-text">{workout.target}</p>
-                                    <p className="card-text">{workout.workout_time}</p> */}
                                 </div>
                             </div>
-                            {/* <div class="card-body">
-                                <h5 class="card-title"><Link to={`/workouts/${workout.id}/`}>{workout.name}</Link></h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div> */}
-
                         </div>
                     )
                 })}
@@ -107,12 +98,6 @@ export default class Workout extends Component {
                         />
                     </div>
                 </div>
-                {/* <WorkoutForm
-                    workout={this.state.newWorkout}
-                    handleChange={this.handleChange}
-                    handleSubmit={this.createWorkout}
-                    submitBtnText="Create"
-                /> */}
             </div>
         )
     }
