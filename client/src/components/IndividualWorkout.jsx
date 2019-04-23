@@ -200,7 +200,6 @@ export default class IndividualWorkout extends Component {
 
 
 
-
                                     {/* <h4>{exercise.name}</h4>
                                     <iframe width="560" height="315" src={exercise.video_url}></iframe>
                                     <div>{exercise.video_url}</div>
