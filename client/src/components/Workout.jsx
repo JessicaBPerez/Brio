@@ -71,11 +71,11 @@ export default class Workout extends Component {
                 <div className="bg-dark text-white workout-margin workout-jumbo">
                     <img className="card-img" src="https://media.self.com/photos/57dc11208a461ae034a90dc8/8:3/w_1280,c_limit/sub-channel-fitness-workouts.jpg" alt="Workout" />
                     <div className="card-img-overlay">
-                        <h5 className="card-title centered workout-text">WORKOUTS</h5>
+                        <h5 className="card-title centered workout-text workout-all-margin">WORKOUTS</h5>
                     </div>
                 </div>
-
                 <h1>All Workouts</h1>
+                <hr className="individual-underline container audio-card-margin"></hr>
                 {this.state.workouts.map(workout => {
                     return (
                         <div key={workout.id} className="card-flex">
