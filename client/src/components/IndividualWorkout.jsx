@@ -146,12 +146,15 @@ export default class IndividualWorkout extends Component {
                 </button>
                 {
                     this.state.isEditFormDisplayed
-                        ? <WorkoutForm
-                            workout={this.state.workout}
-                            handleChange={this.handleChange}
-                            handleSubmit={this.updateWorkout}
-                            submitBtnText="Update"
-                        />
+                        ?
+                        <div className="container">
+                            <WorkoutForm
+                                workout={this.state.workout}
+                                handleChange={this.handleChange}
+                                handleSubmit={this.updateWorkout}
+                                submitBtnText="Update"
+                            />
+                        </div>
                         : null
                 }
                 <hr className="individual-underline container"></hr>
