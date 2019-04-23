@@ -187,10 +187,10 @@ export default class IndividualWorkout extends Component {
                                             <h3>{exercise.name}</h3>
                                             <Link to={`/exercise/${exercise.id}/`}>{exercise.name}</Link>
                                             <div className="getting-started-info">
-                                                <p className="card-text">Target: {exercise.exercise_target}</p>
-                                                <p>Exercise Time: {exercise.time}</p>
-                                                <p>Exercise Description: {exercise.description}</p>
-                                                <p>Exercise Benefits: {exercise.benefits}</p>
+                                                <p className="card-text"><strong>Target:</strong> {exercise.exercise_target}</p>
+                                                <p><strong>Exercise Time:</strong> {exercise.time}</p>
+                                                <p><strong>Exercise Description:</strong> {exercise.description}</p>
+                                                <p><strong>Exercise Benefits:</strong> {exercise.benefits}</p>
                                             </div>
                                             <button className="btn btn-outline-danger btn-lg" onClick={this.deleteWorkout}>Delete Workout</button>
                                         </div>

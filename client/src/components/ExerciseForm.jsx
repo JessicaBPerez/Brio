@@ -35,7 +35,7 @@ export default function ExerciseForm(props) {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="video_url" className="text-white">Video URL:</label>
+                    <label htmlFor="video_url" className="text-white">Embedded Video URL:</label>
                     <input className="form-control"
                         type="text"
                         id="video_url"
