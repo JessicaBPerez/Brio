@@ -158,7 +158,7 @@ export default class IndividualWorkout extends Component {
 
 
 
-                <div className="row align-items-center d-flex justify-content-center individual-recipe-margin">
+                {/* <div className="row align-items-center d-flex justify-content-center individual-recipe-margin">
                     <div className="col-md-5"><img className="img-thumbnail" src={this.state.workout.image_url} alt="" /></div>
                     <div className="col-md-5" style={{ width: "400px;" }}>
                         <h3>{this.state.workout.name}</h3>
@@ -169,7 +169,7 @@ export default class IndividualWorkout extends Component {
                         <button className="btn btn-outline-danger btn-lg" onClick={this.deleteWorkout}>Delete Workout</button>
                     </div>
                 </div>
-                <hr className="individual-underline container"></hr>
+                <hr className="individual-underline container"></hr> */}
 
 
 

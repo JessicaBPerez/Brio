@@ -142,8 +142,6 @@ export default class IndividualRecipe extends Component {
                 </div>
                 <hr className="individual-underline container"></hr>
 
-
-
                 <div className="row align-items-center d-flex justify-content-center">
                     <div className="col-md-5">
                         <h3>Directions</h3>
@@ -166,34 +164,6 @@ export default class IndividualRecipe extends Component {
                                 </div>
                             </p>
                         </div>
-
-
-
-
-
-                        {/* <div className="card text-white ingredient-card mb-3" style={{ maxWidth: "18rem;" }}>
-                            <div className="card-header"><h3>Ingredients</h3></div>
-                            <div className="card-body">
-                                <p className="card-text">
-                                    <div className="card">
-                                        {this.state.ingredients.map(ingredient => {
-                                            return (
-                                                <div key={ingredient.id} className="d-flex justify-content-center">
-                                                    <button onClick={() => this.deleteIngredient(ingredient.id)} type="button" className="ingredient-decor" aria-label="Close"><p>{ingredient.name}</p>
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                </p>
-                            </div>
-                        </div> */}
-
-
-
-
-
                     </div>
                 </div>
                 <hr className="individual-underline container"></hr>
