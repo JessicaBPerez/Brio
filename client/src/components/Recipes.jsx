@@ -95,7 +95,7 @@ export default class Recipes extends Component {
                         )
                     })}
                 </div>
-                <h1>Create Recipe</h1>
+                <h1 className="card-margin-all">Create Recipe</h1>
                 <div className="jumbotron jumbotron-fluid recipe-jumbotron">
                     <div className="container">
                         <RecipeForm
