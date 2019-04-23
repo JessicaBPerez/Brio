@@ -126,6 +126,7 @@ export default class Gyms extends Component {
                             <div className="w3-xlarge w3-display-bottomleft w3-padding">
                                 <h1 className="atlanta">{this.state.weatherCity.name}</h1>
                                 <br />
+                                <h3>Three Day Forecast</h3>
                                 <h3 className="atlanta-small">
                                     Humidity: {this.state.weatherMain}
                                 </h3>
