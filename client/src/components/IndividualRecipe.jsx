@@ -21,7 +21,6 @@ export default class IndividualRecipe extends Component {
     componentDidMount() {
         const recipeId = this.props.match.params.id
         this.fetchRecipe(recipeId)
-        // this.fetchIngredientz()
     }
 
     fetchRecipe = async (recipeId) => {

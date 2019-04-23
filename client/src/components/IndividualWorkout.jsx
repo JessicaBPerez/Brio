@@ -119,6 +119,20 @@ export default class IndividualWorkout extends Component {
         })
     }
 
+
+
+    // Delete Exercise
+    deleteExercse = async (exerciseId) => {
+        try {
+            const response = await axios.delete(`/api/v1/exercises/${exerciseId}/`).then(() => {
+                this.fetchWorkout(this.props.match.params.id)
+            })
+        }
+        catch (err) {
+            console.log(`Didn't delete exercises, Jess!`, err)
+        }
+    }
+
     render() {
         if (this.state.redirectToWorkouts === true) {
             return <Redirect to="/workouts" />
@@ -188,14 +202,14 @@ export default class IndividualWorkout extends Component {
                                         </div>
                                         <div className="col-md-5" style={{ width: "400px;" }}>
                                             <h3>{exercise.name}</h3>
-                                            <Link to={`/exercise/${exercise.id}/`}>{exercise.name}</Link>
+                                            {/* <Link to={`/exercise/${exercise.id}/`}>{exercise.name}</Link> */}
                                             <div className="getting-started-info">
                                                 <p className="card-text"><strong>Target:</strong> {exercise.exercise_target}</p>
                                                 <p><strong>Exercise Time:</strong> {exercise.time}</p>
                                                 <p><strong>Exercise Description:</strong> {exercise.description}</p>
                                                 <p><strong>Exercise Benefits:</strong> {exercise.benefits}</p>
                                             </div>
-                                            <button className="btn btn-outline-danger btn-lg" onClick={this.deleteWorkout}>Delete Workout</button>
+                                            <button className="btn btn-outline-danger btn-lg" onClick={() => this.deleteExercse(exercise.id)}>Delete Exercise</button>
                                         </div>
                                     </div>
                                     <hr className="individual-underline container"></hr>
