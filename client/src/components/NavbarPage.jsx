@@ -32,7 +32,7 @@ class NavbarPage extends Component {
                                     <Link to={`/recipes`} className="nav-link js-scroll-trigger">Recipes</Link>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <Link to={`/gyms`} className="nav-link js-scroll-trigger">Gyms</Link>
+                                    <Link to={`/gyms`} className="nav-link js-scroll-trigger">Music</Link>
                                 </li>
                             </ul>
                         </div>

@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import NavbarPage from './NavbarPage';
+import atlanta2 from '../images/atlanta.jpg'
 const NAPSTER_API_KEY = process.env.REACT_APP_NAPSTER_API_KEY;
-const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY
+const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+
 
 export default class Gyms extends Component {
     state = {
         songs: [],
-        tracks: []
+        tracks: [],
+        weatherCity: [],
+        weatherList: []
     };
 
     componentDidMount() {
@@ -88,7 +92,6 @@ export default class Gyms extends Component {
             });
     };
 
-
     render() {
         return (
             <div>
@@ -100,6 +103,79 @@ export default class Gyms extends Component {
                     </div>
                 </div>
                 <hr className="individual-underline container audio-card-margin"></hr>
+
+                <div
+                    style={{
+                        width: "100vw",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center"
+                    }}
+                >
+                    <div
+                        className="w3-card-4 w3-margin margin weather justify-content-center"
+                        style={{ width: "50%" }}
+                    >
+                        <div className="w3-display-container w3-text-white justify-content-center">
+                            <img
+                                src={atlanta2}
+                                alt="Lights"
+                                style={{ width: "100%", margin: "0 auto" }}
+                            />
+                            <div className="w3-xlarge w3-display-bottomleft w3-padding">
+                                <h1 className="atlanta">{this.state.weatherCity.name}</h1>
+                                <br />
+                                <h3 className="atlanta-small">
+                                    Humidity: {this.state.weatherMain}
+                                </h3>
+                            </div>
+                        </div>
+                        <div className="w3-row">
+                            <div className="w3-third w3-center">
+                                <h3 className="atlanta-small button-margin-all">
+                                    {" "}
+                                    {this.state.actualWeatherDay1Description}
+                                </h3>
+                                <img
+                                    className="border-style"
+                                    src={`http://openweathermap.org/img/w/${
+                                        this.state.actualWeatherDay1Icon
+                                        }.png`}
+                                    alt="weather icon"
+                                    style={{ width: "80px" }}
+                                />
+                            </div>
+                            <div className="w3-third w3-center">
+                                <h3 className="atlanta-small button-margin-all">
+                                    {this.state.actualweatherDay2Description}
+                                </h3>
+                                <img
+                                    className="border-style"
+                                    src={`http://openweathermap.org/img/w/${
+                                        this.state.actualWeatherDay2Icon
+                                        }.png`}
+                                    alt="weather icon"
+                                    style={{ width: "80px" }}
+                                />
+                            </div>
+                            <div className="w3-third w3-center w3-margin-bottom">
+                                <h3 className="atlanta-small button-margin-all">
+                                    {" "}
+                                    {this.state.actualWeatherDay3Description}
+                                </h3>
+                                <img
+                                    className="border-style"
+                                    src={`http://openweathermap.org/img/w/${
+                                        this.state.actualWeatherDay2Icon
+                                        }.png`}
+                                    alt="weather icon"
+                                    style={{ width: "80px" }}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
 
                 <div className="card-flex audio-card-margin">

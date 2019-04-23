@@ -27,15 +27,16 @@ body {
 }
 
 .navbarstyle {
-    background-image: url('https://www.readersdigest.ca/wp-content/uploads/sites/14/2017/03/history-of-the-easter-bunny.jpg');
+    /* background-image: url('https://www.readersdigest.ca/wp-content/uploads/sites/14/2017/03/history-of-the-easter-bunny.jpg'); */
+    background-color: #495057!important;
 }
 
 .brand-properties {
-    font-family: Orbitron;
+    font-family: Lobster;
 }
 
 .navbar-brand {
-    font-size: 2.2rem!important;
+    font-size: 2.5rem!important;
 }
 
 .nav-link {
