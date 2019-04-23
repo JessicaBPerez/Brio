@@ -75,18 +75,20 @@ export default class Workout extends Component {
                     </div>
                 </div>
                 <hr className="individual-underline container audio-card-margin"></hr>
-                {this.state.workouts.map(workout => {
-                    return (
-                        <div key={workout.id} className="card-flex">
-                            <div className="card bg-dark text-white audio-card-margin" style={{ maxWidth: '650px' }}>
-                                <img className="card-img" src={workout.image_url} alt={workout.name} />
-                                <div className="card-img-overlay">
-                                    <h3 className="card-title centered scale"><Link to={`/workouts/${workout.id}/`} className="workout-link">{workout.name}</Link></h3>
+                <div className="card-flex">
+                    {this.state.workouts.map(workout => {
+                        return (
+                            <div key={workout.id} className="card-flex">
+                                <div className="card bg-dark text-white audio-card-margin" style={{ maxWidth: '650px' }}>
+                                    <img className="card-img" src={workout.image_url} alt={workout.name} />
+                                    <div className="card-img-overlay">
+                                        <h3 className="card-title centered scale"><Link to={`/workouts/${workout.id}/`} className="workout-link">{workout.name}</Link></h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </div>
                 <h1>Create Workout</h1>
                 <div className="jumbotron jumbotron-fluid recipe-jumbotron">
                     <div className="container">

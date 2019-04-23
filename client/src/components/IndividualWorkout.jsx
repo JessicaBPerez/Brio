@@ -213,11 +213,6 @@ export default class IndividualWorkout extends Component {
                                         </div>
                                     </div>
                                     <hr className="individual-underline container"></hr>
-
-
-
-
-
                                 </div>
                             )
                         })
