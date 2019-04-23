@@ -23,16 +23,16 @@ class NavbarPage extends Component {
                         <div className="collapse navbar-collapse" id="navbarResponsive">
                             <ul className="nav navbar-nav ml-auto text-uppercase">
                                 <li className="nav-item" role="presentation">
-                                    <a className="nav-link js-scroll-trigger" href="/">Home</a>
+                                    <a className="nav-link js-scroll-trigger nav-font" href="/">Home</a>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <Link to={`/workouts`} className="nav-link js-scroll-trigger">Workouts</Link>
+                                    <Link to={`/workouts`} className="nav-link js-scroll-trigger nav-font">Workouts</Link>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <Link to={`/recipes`} className="nav-link js-scroll-trigger">Recipes</Link>
+                                    <Link to={`/recipes`} className="nav-link js-scroll-trigger nav-font">Recipes</Link>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <Link to={`/gyms`} className="nav-link js-scroll-trigger">Music</Link>
+                                    <Link to={`/gyms`} className="nav-link js-scroll-trigger nav-font">Music</Link>
                                 </li>
                             </ul>
                         </div>

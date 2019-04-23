@@ -18,8 +18,8 @@ body {
 
 @media (min-width:992px) {
     #mainNav {
-        padding-top: 25px;
-        padding-bottom: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         transition: padding-top .3s, padding-bottom .3s;
         border: none;
         background-color: transparent;
@@ -244,7 +244,7 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #4f7680;
+    background-color: #3f7987;
     border-color: #1a284b;
 }
 
@@ -504,4 +504,8 @@ textarea {
 
 .workout-all-margin {
     margin-top: 3rem!important;
+}
+
+.nav-font {
+    font-size: 1.2rem;
 }
