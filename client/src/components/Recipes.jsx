@@ -76,23 +76,25 @@ export default class Recipes extends Component {
                     </div>
                 </div>
                 <hr className="individual-underline container"></hr>
-                {this.state.recipes.map(recipe => {
-                    return (
-                        <div className="flex-container card-flex" style={{ marginTop: "1rem", marginLeft: "2rem;" }}>
-                            <div key={recipe.id} className="flex-container card-flex card-margin-all">
-                                <div className="card" style={{ width: "600px" }}>
-                                    <img src={recipe.image_url} className="card-img-top" alt={recipe.name} />
-                                    <div className="card-body">
-                                        <h5 className="card-title"><Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link></h5>
-                                        <p className="card-text">Cook Time: {recipe.prep_time}</p>
-                                        <p className="card-text">Calories: {recipe.calories}</p>
-                                        <Link to={`/recipes/${recipe.id}/`} className="btn btn-primary">Get Recipe</Link>
+                <div className="card-flex">
+                    {this.state.recipes.map(recipe => {
+                        return (
+                            <div className="flex-container card-flex" style={{ marginTop: "1rem", marginLeft: "2rem;" }}>
+                                <div key={recipe.id} className="flex-container card-flex card-margin-all">
+                                    <div className="card" style={{ width: "600px" }}>
+                                        <img src={recipe.image_url} className="card-img-top" alt={recipe.name} />
+                                        <div className="card-body">
+                                            <h5 className="card-title"><Link to={`/recipes/${recipe.id}/`}>{recipe.name}</Link></h5>
+                                            <p className="card-text">Cook Time: {recipe.prep_time}</p>
+                                            <p className="card-text">Calories: {recipe.calories}</p>
+                                            <Link to={`/recipes/${recipe.id}/`} className="btn btn-primary">Get Recipe</Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </div>
                 <h1>Create Recipe</h1>
                 <div className="jumbotron jumbotron-fluid recipe-jumbotron">
                     <div className="container">
