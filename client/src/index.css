@@ -493,3 +493,11 @@ textarea {
     flex-wrap: wrap!important;
     justify-content: space-around!important;
 }
+
+.audio-margin {
+    margin: 0 3rem;
+}
+
+.audio-card-margin {
+    margin-bottom: 3rem;
+}
