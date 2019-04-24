@@ -12,3 +12,18 @@ The goal of this project was to utilize my knowledge of React, Python, Django, a
 
 ## Wireframes
 <img src= "images/Brio_Main.png" alt="Brio Main Page">
+
+#### Workout Page
+<img src= "images/Workout_Page.png" alt="Workout Page">
+
+#### Individual Workout Page
+<img src= "images/Individual_Workout.png" alt="Individual Workout">
+
+#### Recipe Page
+<img src= "images/Recipe_Page.png" alt="Recipe Page">
+
+#### Individual Recipe Page
+<img src= "images/Recipe_Show.png" alt="Individual Recipe">
+
+## ERD
+<img src= "images/Brio_ERD.png" alt="Brio ERD">
