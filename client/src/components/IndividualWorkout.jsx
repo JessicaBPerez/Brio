@@ -172,25 +172,6 @@ export default class IndividualWorkout extends Component {
                         : null
                 }
                 <hr className="individual-underline container"></hr>
-
-
-
-                {/* <div className="row align-items-center d-flex justify-content-center individual-recipe-margin">
-                    <div className="col-md-5"><img className="img-thumbnail" src={this.state.workout.image_url} alt="" /></div>
-                    <div className="col-md-5" style={{ width: "400px;" }}>
-                        <h3>{this.state.workout.name}</h3>
-                        <div className="getting-started-info">
-                            <p className="card-text">Target: {this.state.workout.target}</p>
-                            <p>Workout Time: {this.state.workout.workout_time}</p>
-                        </div>
-                        <button className="btn btn-outline-danger btn-lg" onClick={this.deleteWorkout}>Delete Workout</button>
-                    </div>
-                </div>
-                <hr className="individual-underline container"></hr> */}
-
-
-
-
                 <div>
                     {
                         this.state.exercises.map(exercise => {
@@ -202,7 +183,6 @@ export default class IndividualWorkout extends Component {
                                         </div>
                                         <div className="col-md-5" style={{ width: "400px;" }}>
                                             <h3>{exercise.name}</h3>
-                                            {/* <Link to={`/exercise/${exercise.id}/`}>{exercise.name}</Link> */}
                                             <div className="getting-started-info">
                                                 <p className="card-text"><strong>Target:</strong> {exercise.exercise_target}</p>
                                                 <p><strong>Exercise Time:</strong> {exercise.time}</p>
