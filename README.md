@@ -27,3 +27,28 @@ The goal of this project was to utilize my knowledge of React, Python, Django, a
 
 ## ERD
 <img src= "images/Brio_ERD.png" alt="Brio ERD">
+
+## Technologies Used
+
+1. Languages:
+
+- CSS
+- JavaScript
+
+2. Libraries:
+
+- Bootstrap
+- React
+
+3. Frameworks/ Technologies:
+
+- Django
+- Django Rest Framework
+- Python
+- Pipenv
+
+## Future Developments/Improvements for Version 2
+
+- Spotify authentication so users can listen to their own playlists.
+- Make site more interactive.
+- Workout recommendations based on workout video views.
