@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #f7f7f7!important;
+    background-color: #f7f7f7 !important;
 }
 
 
@@ -26,8 +26,24 @@ body {
     }
 }
 
+.footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: padding-top .3s, padding-bottom .3s;
+    border: none;
+}
+
+.footerstyle {
+    background-color: #737d87 !important;
+}
+
+.footerfont {
+    color: white;
+    font-family: "Josefin sans";
+}
+
 .navbarstyle {
-    background-color: #737d87!important;
+    background-color: #737d87 !important;
 }
 
 .brand-properties {
@@ -35,11 +51,11 @@ body {
 }
 
 .navbar-brand {
-    font-size: 2.5rem!important;
+    font-size: 2.5rem !important;
 }
 
 .nav-link {
-    color: rgb(255, 255, 255)!important;
+    color: rgb(255, 255, 255) !important;
     font-family: "Josefin sans";
     font-size: 1.3rem;
 }
@@ -212,8 +228,8 @@ body {
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
-    background-color: white!important;
-    border-color: rgb(17, 17, 41)!important;
+    background-color: white !important;
+    border-color: rgb(17, 17, 41) !important;
 }
 
 .btn-primary.focus,
@@ -261,11 +277,11 @@ a:hover {
 }
 
 .mt-5 {
-    margin-top: 3rem!important;
+    margin-top: 3rem !important;
 }
 
 .rounded-pill {
-    border-radius: 50rem!important;
+    border-radius: 50rem !important;
 }
 
 .btn-primary {
@@ -434,7 +450,7 @@ textarea {
 /* Recipe Form Jumbotron */
 
 .recipe-jumbotron {
-    background-color: rgb(62, 70, 79)!important;
+    background-color: rgb(62, 70, 79) !important;
 }
 
 .individual-underline {
@@ -462,7 +478,7 @@ textarea {
 }
 
 .ingredient-card {
-    background: rgb(62, 70, 79)!important;
+    background: rgb(62, 70, 79) !important;
 }
 
 .workouts-margin {
@@ -489,9 +505,9 @@ textarea {
 /* Flex Wrap for cards */
 
 .card-flex {
-    display: flex!important;
-    flex-wrap: wrap!important;
-    justify-content: space-around!important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around !important;
 }
 
 .audio-margin {
@@ -503,7 +519,7 @@ textarea {
 }
 
 .workout-all-margin {
-    margin-top: 3rem!important;
+    margin-top: 3rem !important;
 }
 
 .nav-font {

@@ -24,7 +24,6 @@ class App extends Component {
               <Route path='/recipes/:id' component={IndividualRecipe} />
               <Route exact path='/gyms' component={Gyms} />
             </Switch>
-
           </div>
         </div>
       </Router>

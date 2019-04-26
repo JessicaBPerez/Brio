@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import WorkoutForm from './WorkoutForm.jsx'
 import NavbarPage from './NavbarPage.jsx';
+import Footer from "./Footer.jsx"
 
 export default class Workout extends Component {
     state = {
@@ -100,6 +101,7 @@ export default class Workout extends Component {
                         />
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }

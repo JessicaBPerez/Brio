@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom'
 import RecipeForm from './RecipeForm'
 import IngredientForm from './IngredientForm'
 import NavbarPage from './NavbarPage';
+import Footer from "./Footer.jsx"
 
 export default class IndividualRecipe extends Component {
     state = {
@@ -194,6 +195,7 @@ export default class IndividualRecipe extends Component {
                         </div>
                         : null
                 }
+                <Footer />
             </div>
         )
     }

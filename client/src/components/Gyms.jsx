@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import NavbarPage from './NavbarPage';
 import atlanta2 from '../images/atlanta.jpg'
+import Footer from "./Footer.jsx"
 const NAPSTER_API_KEY = process.env.REACT_APP_NAPSTER_API_KEY;
 const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
@@ -225,6 +226,7 @@ export default class Gyms extends Component {
                         <audio className="justify-content-center audio-margin" controls src={this.state.firstNameSong}></audio>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }

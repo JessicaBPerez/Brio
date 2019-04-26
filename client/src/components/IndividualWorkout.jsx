@@ -5,6 +5,7 @@ import WorkoutForm from './WorkoutForm.jsx'
 import { Link } from 'react-router-dom'
 import ExerciseForm from './ExerciseForm.jsx'
 import NavbarPage from './NavbarPage.jsx';
+import Footer from "./Footer.jsx"
 
 export default class IndividualWorkout extends Component {
     state = {
@@ -210,6 +211,7 @@ export default class IndividualWorkout extends Component {
                         />
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }

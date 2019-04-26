@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import RecipeForm from './RecipeForm.jsx'
 import NavbarPage from './NavbarPage.jsx';
+import Footer from "./Footer.jsx"
 
 export default class Recipes extends Component {
     state = {
@@ -106,6 +107,7 @@ export default class Recipes extends Component {
                         />
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }
