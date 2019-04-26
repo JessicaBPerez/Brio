@@ -2,7 +2,7 @@
 
 General Assembly WDI 20 - Project 4
 
-- Project: https://brio-fitness.herokuapp.com/workouts
+- Project: https://brio-fitness.herokuapp.com
 - Trello Board: https://trello.com/b/DgWAeWVl/brio
 - Git Hub: https://github.com/JessicaBPerez/Brio.git
 
